@@ -18,9 +18,8 @@ body {
 }
 
 .circulo {
-    height: 300px;
-    width: 300px;
-    margin: auto;
+    height: 23rem;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
     background-image: url("../img/pexels-keira-burton-6624387.jpg");
     background-size: cover;
