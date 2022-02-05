@@ -1,0 +1,29 @@
+body {
+    background-color: #FFFFA3;
+    height: 100vh;
+}
+
+.navbrand {
+    height: 5rem;
+}
+
+.text-color {
+    font-weight: 500;
+    color: #231C07;
+}
+
+.text-homepage > h1 {
+    font-weight: 500;
+    color: #F34213;
+}
+
+.circulo {
+    height: 23rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-image: url("../img/pexels-keira-burton-6624387.jpg");
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    border: 2px solid #F34213;
+}
