@@ -4,11 +4,15 @@ body {
 }
 
 .navbrand {
-    height: 5rem;
+    height: 4.6rem;
 }
 
 .text-color {
     font-weight: 500;
+    color: rgba(243, 66, 19, 0.8)!important;
+}
+
+.text-color-slide {
     color: #231C07;
 }
 
@@ -26,4 +30,21 @@ body {
     background-repeat: none;
     background-position: center;
     border: 2px solid #F34213;
+}
+
+.novo-bg {
+    background-color: #FFFFFF;
+    border-bottom: 3px solid rgba(243, 66, 19);
+    box-shadow: 0px 6px 17px 1px rgba(255,214,120,0.74);
+}
+
+.carousel {
+    overflow: hidden;
+    height: 20rem;
+}
+
+.imagem-carrossel {
+    object-fit: cover;
+    object-position: 0 60%;
+    height: 400px;
 }
