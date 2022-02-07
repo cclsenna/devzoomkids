@@ -1,0 +1,50 @@
+body {
+    background-color: #FFFFA3;
+    height: 100vh;
+}
+
+.navbrand {
+    height: 4.6rem;
+}
+
+.text-color {
+    font-weight: 500;
+    color: rgba(243, 66, 19, 0.8)!important;
+}
+
+.text-color-slide {
+    color: #231C07;
+}
+
+.text-homepage > h1 {
+    font-weight: 500;
+    color: #F34213;
+}
+
+.circulo {
+    height: 23rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-image: url("../img/pexels-keira-burton-6624387.jpg");
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    border: 2px solid #F34213;
+}
+
+.novo-bg {
+    background-color: #FFFFFF;
+    border-bottom: 3px solid rgba(243, 66, 19);
+    box-shadow: 0px 6px 17px 1px rgba(255,214,120,0.74);
+}
+
+.carousel {
+    overflow: hidden;
+    height: 20rem;
+}
+
+.imagem-carrossel {
+    object-fit: cover;
+    object-position: 0 60%;
+    height: 400px;
+}
