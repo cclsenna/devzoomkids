@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title></title>
-        <link rel="stylesheet" href="Css/style.css">
+        <link rel="stylesheet" href="./assets/css/paginaListaDeEspera.css">
 
 </head>
 
@@ -18,56 +18,80 @@
                         <div class="container">
                                 <div class="container_cep">
                                         <form>
-                                                <div class="form-group"><label for="nome"></label>Nome<input type="text"
-                                                                class="fom-control" id="nome" required><small>Guilherme
-                                                                S. Oliveira</small></div>
-
-                                                <div class="form-group"><label for="rg"></label>RG<input type="text"
-                                                                class="fom-control" id="rg"
-                                                                required><small>00.000.000-0</small></div>
-
-                                                <div class="form-group"><label for="Senha"></label>Senha<input
-                                                                type="password" class="fom-control" id="senha"
-                                                                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,30}$"
-                                                                title="A senha deve conter entre 6 a 30 caracteres, deve conter pelo menos um número e não deve conter simbolos"
-                                                                required><small></small></div>
-
-                                                <div class="form-group"><label for="confirmarSenha"></label>Confirmar
-                                                        Senha<input type="password" class="fom-control"
-                                                                id="confirmarSenha" required><small></small></div>
-
-                                                <div class="form-group"><label for="email"></label>E-mail<input
-                                                                type="email" class="fom-control" id="email"
-                                                                required><small>teste@email.com</small></div>
-                                                <div class="form-group"><label for="cep"></label>CEP<input type="text"
-                                                                class="fom-control" id="cep"
-                                                                required><small>00000-000</small></div>
-
-                                                <div class="form-group"><label for="estado">Estado</label><input
-                                                                type="text" class="fom-control" id="estado"><small>ex.
-                                                                Destrito Federal</small></div>
-
-                                                <div class="form-group"><label for="cidade"></label>Cidade<input
-                                                                type="text" id="cidade" class="fom-control"><small>ex.
-                                                                Brasília</small></div>
-
-                                                <div class="form-group"><label for="bairro"></label>Bairro<input
-                                                                type="text" id="bairro" class="fom-control"><small>ex.
-                                                                Águas Claras</small></div>
-
-                                                <div class="form-group"><label for="rua"></label>Rua<input type="text"
-                                                                id="rua" class="fom-control"><small>ex. Sul</small>
+                                                <div class="form-group">
+                                                        <label for="nome"></label>Nome<input type="text"
+                                                                class="fom-control" id="nome" data-tipo="nome" required><small>Guilherme
+                                                                S. Oliveira</small>
                                                 </div>
 
-                                                <div class="form-group"><label for="numero"></label>Número<input
-                                                                type="text" class="fom-control" required><small>ex.
-                                                                00</small></div>
+                                                <div class="form-group">
+                                                        <label for="rg"></label>RG<input type="text" class="fom-control"
+                                                                id="rg" data-tipo="rg" required><small>00.000.000-0</small>
+                                                </div>
 
-                                                <div class="form-group"><label
-                                                                for="complemento"></label>Complemento<input type="text"
-                                                                class="fom-control" required><small>ex. 00</small></div>
+                                                <div class="form-group">
+                                                        <label for="Senha"></label>Senha<input type="password"
+                                                                class="fom-control" id="senha"
+                                                                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,30}$"
+                                                                title="A senha deve conter entre 6 a 30 caracteres, deve conter pelo menos um número e não deve conter simbolos"
+                                                                data-tipo="senha" required><small></small>
+                                                </div>
 
-                                                <div><button id="send">Search</button></div>
+                                                <div class="form-group">
+                                                        <label for="confirmarSenha"></label>Confirmar
+                                                        Senha<input type="password" class="fom-control"
+                                                                id="confirmarSenha" data-tipo="confirmarSenha"required><small></small>
+                                                </div>
+
+                                                <div class="form-group">
+                                                        <label for="email"></label>E-mail<input type="email"
+                                                                class="fom-control" id="email"
+                                                                data-tipo="email" required><small>teste@email.com</small>
+                                                </div>
+                                                <div class="form-group">
+                                                        <label for="cep"></label>CEP<input type="text"
+                                                                class="fom-control" id="cep"
+                                                                data-tipo="cep" required><small>00000-000</small>
+                                                </div>
+
+                                                <div class="form-group">
+                                                        <label for="estado">Estado</label><input type="text"
+                                                                class="fom-control" id="estado"><small>ex.
+                                                                Destrito Federal</small>
+                                                </div>
+
+                                                <div class="form-group">
+                                                        <label for="cidade"></label>Cidade<input type="text" id="cidade"
+                                                                class="fom-control"><small>ex.
+                                                                Brasília</small>
+                                                </div>
+
+                                                <div class="form-group">
+                                                        <label for="bairro"></label>Bairro<input type="text" id="bairro"
+                                                                class="fom-control"><small>ex.
+                                                                Águas Claras</small>
+                                                </div>
+
+                                                <div class="form-group">
+                                                        <label for="rua"></label>Rua<input type="text" id="rua"
+                                                                class="fom-control">
+                                                        <small>ex. Sul</small>
+                                                </div>
+
+                                                <div class="form-group">
+                                                        <label for="numero"></label>Número<input type="text"
+                                                                class="fom-control" required><small>ex.
+                                                                00</small>
+                                                </div>
+
+                                                <div class="form-group">
+                                                        <label for="complemento"></label>Complemento<input type="text"
+                                                                class="fom-control" required><small>ex. 00</small>
+                                                </div>
+
+                                                <div>
+                                                        <button id="send">Search</button>
+                                                </div>
                                         </form>
                                 </div>
 
@@ -76,7 +100,7 @@
                 <footer>
                 </footer>
                 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-                <script src="Script/script.js"></script>
+                <script src="./assets/scripts/app_validacao.js" type="modulo"></script>
         </div>
 </body>
 
