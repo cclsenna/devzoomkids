@@ -64,22 +64,6 @@ const mensagensDeErro = {
                 customError: 'O CEP digitado é inválido'
         },
 
-        estado: {
-                valueMissing: 'O campo de estado não pode estar vazio.'
-        },
-
-        cidade: {
-                valueMissing: 'O campo de cidade não pode estar vazio.'
-        },
-
-        bairro: {
-                valueMissing: 'O campo de bairro não pode estar vazio.'
-        },
-
-        rua: {
-                valueMissing: 'O campo de rua não pode estar vazio.'
-        },
-
         numero: {
                 valueMissing: 'O campo de numero não pode estar vazio.'
         },
@@ -110,14 +94,14 @@ function mostraMensagemDeErro(tipoDeInput, input) {
 }
 
 //Criando evento para auto preenchimento quando fora de foco;
-$('#cep').on('focusout', function (event) {
+$('#inputZip').on('focusout', function (event) {
         event.preventDefault();
         buscaCep();
 });
 
 //Declarando a função buscaCep, que faz a solicitação à API;
 function buscaCep() {
-        let cep = $('#cep').val().replace(/\D/g, '');
+        let cep = $('#inputZip').val().replace(/\D/g, '');
         $.ajax({
                 url: `https://viacep.com.br/ws/${cep}/json/`,
                 method: 'GET',
@@ -126,10 +110,10 @@ function buscaCep() {
                 success: function (parametro) {
 
                         //Realiza a manipulação de DOM, preenchendo os campos;
-                        $('#estado').val(parametro.uf);
-                        $('#cidade').val(parametro.localidade);
-                        $('#bairro').val(parametro.bairro);
-                        $('#rua').val(parametro.logradouro);
+                        $('#inputState').val(parametro.uf);
+                        $('#inputCity').val(parametro.localidade);
+                        $('#inputBairro').val(parametro.bairro);
+                        $('#inputRua').val(parametro.logradouro);
 
                 },
                 //Tratamento de ERRO;
