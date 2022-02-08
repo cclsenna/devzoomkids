@@ -1,0 +1,106 @@
+
+*{
+  margin:0;
+  padding: 0;
+}
+
+.navbrand {
+  height: 6rem;
+}
+
+.text-color {
+  font-weight: 500;
+  color: rgba(243, 66, 19, 0.8)!important;
+}
+
+h1{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 30%;
+  color: #231C07;
+  text-align: center;
+}
+
+.p{
+  text-align: center;
+}
+
+section.pricing {
+  margin-top: -65px;
+  background: #FFFFA3;
+}
+  
+.pricing .card {
+  border-color: #F34213 ;
+  border-radius: 1rem;
+  transition: all 0.2s;
+}
+  
+.pricing hr {
+  margin: 1.5rem 0;
+}
+  
+.pricing .card-title {
+  margin: 0.5rem 0;
+  font-size: 2rem;
+  color: #634133;
+  letter-spacing: .1rem;
+  font-weight: bold;
+}
+  
+.pricing .card-price {
+  font-size: 0.9rem;
+  color: #634133;
+  margin: 0;
+}
+  
+.pricing .card-price .period {
+  font-size: 0.8rem;
+  color: #634133;
+}
+  
+.pricing ul li {
+  margin-bottom: 1rem;
+}
+
+.fa-li{
+  color: #231C07;
+}
+  
+.pricing .text-muted {
+  opacity: 0.7;
+}
+  
+.pricing .btn {
+  background-color:#F34213;
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  border-bottom-color: #F34213;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+  /* Hover Effects on Card */
+  
+@media (min-width: 992px) {
+
+  .pricing .card:hover {
+    margin-top: -0.80rem;
+    margin-left: -0.80rem;
+    margin-right: -0.80rem;
+    margin-bottom: -0.25rem;
+    box-shadow: 0 0.5rem 2rem 0 #c73811;
+  }
+
+  .card-body:hover h2 {
+    color: #c73811;
+  }
+      
+
+  .pricing .card:hover .btn {
+    background-color: #F34213;;
+    opacity: 1;
+  }
+}
