@@ -53,3 +53,15 @@ body {
     text-align: center;
 }
 
+#botao-recuperar{
+    background-color:#F34213;
+    border-color:#000;
+}
+
+#botao-recuperar:hover{
+    background-color:grey;
+    border-color: #000;
+
+
+}
+

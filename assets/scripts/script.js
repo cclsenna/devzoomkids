@@ -138,3 +138,9 @@ function buscaCep() {
                 }
         })
 };
+
+
+//enviar email
+
+//document.querySelector('botao-recuperar').addEventListener('click',()=>{
+//})
