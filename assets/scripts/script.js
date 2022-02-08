@@ -13,12 +13,14 @@ export function valida(input) {
         if (input.validity.valid) {
                 input.parentElement.classList.remove('form-group-erro');
                 input.parentElement.querySelector('.input-mensagem-erro').innerHTML = '';
+                
 
                 //Caso encontre o erro de imput ou o erro de função, adiciona a classe de erro (form-group--invalido).
 
         } else {
                 input.parentElement.classList.add('form-group-erro');
                 input.parentElement.querySelector('.input-mensagem-erro').innerHTML = mostraMensagemDeErro(tipoDeInput, input);
+                
         };
 };
 
@@ -82,6 +84,7 @@ const mensagensDeErro = {
 
 const validadores = {
         confirmarSenha: input => validadorDeSenha(input),
+        rg: input => validadorDeRg(input)
 
 };
 
@@ -135,17 +138,15 @@ function validadorDeSenha(input) {
         if (senha != confirmaSenha) {
                 mensagem = 'As senhas não correspondem.';
         }
-
         input.setCustomValidity(mensagem);
 }
 
-
-document.querySelector('.btn').onclick = (event) => {
-        let test = true;
-        if (!test) {
-                event.preventDefault();
-
-        } else {
-                alert('Cadastrado com sucesso');
+function validadorDeRg(input) {
+        const rg = input.value.replace(/\D/g, '');
+        let mensagem = '';
+        if(rg.length < 8 || rg.length > 9) {
+                mensagem = 'O RG digitado é inválido'
+                
         };
-}
+        input.setCustomValidity(mensagem);
+};
