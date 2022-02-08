@@ -1,4 +1,4 @@
-import {valida} from './script'
+import {valida} from './script.js'
 
 const inputs = document.querySelectorAll('input');
 
