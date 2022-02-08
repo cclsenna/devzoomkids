@@ -12,14 +12,14 @@ export function valida(input) {
         //Verifica o atributo (.valid) do objeto input, caso seja TRUE, remove a classe de erro (form-group--invalido).
 
         if (input.validity.valid) {
-                input.parentElement.classList.remove('form-group--invalido');
-                input.parentElement.querySelector('.form-mensagem-erro').innerHTML = '';
+                input.parentElement.classList.remove('form-group-erro');
+                input.parentElement.querySelector('.input-mensagem-erro').innerHTML = '';
 
                 //Caso encontre o erro de imput ou o erro de função, adiciona a classe de erro (form-group--invalido).
 
         } else {
-                input.parentElement.classList.add('form-group--invalido');
-                input.parentElement.querySelector('.form-mensagem-erro').innerHTML = mostraMensagemDeErro(tipoDeInput, input);
+                input.parentElement.classList.add('form-group-erro');
+                input.parentElement.querySelector('.input-mensagem-erro').innerHTML = mostraMensagemDeErro(tipoDeInput, input);
         };
 };
 
@@ -30,12 +30,16 @@ const tiposDeErro = [
         'typeMismatch',
         'patternMismatch',
         'customError'
-]
+] 
 
 //Objeto contendo as mensagens de erro.
 
 const mensagensDeErro = {
-        nome: {
+        nomeResponsavel: {
+                valueMissing: 'O campo de nome do responsavel não pode estar vazio.'
+        },
+        
+        nomeAluno: {
                 valueMissing: 'O campo nome não pode estar vazio.'
         },
 
@@ -78,6 +82,7 @@ const mensagensDeErro = {
 //Objeto para erros de função ou com funções específicas.
 
 const validadores = {
+        confirmarSenha: input => validadorDeSenha (input),
 
 };
 
@@ -94,14 +99,14 @@ function mostraMensagemDeErro(tipoDeInput, input) {
 }
 
 //Criando evento para auto preenchimento quando fora de foco;
-$('#inputZip').on('focusout', function (event) {
+ $('#inputZip').on('focusout', function (event) {
         event.preventDefault();
         buscaCep();
-});
-
+}); 
+ 
 //Declarando a função buscaCep, que faz a solicitação à API;
 function buscaCep() {
-        let cep = $('#inputZip').val().replace(/\D/g, '');
+        let cep = document.querySelector('#inputZip').value.replace(/\D/g, '');
         $.ajax({
                 url: `https://viacep.com.br/ws/${cep}/json/`,
                 method: 'GET',
@@ -122,3 +127,32 @@ function buscaCep() {
                 }
         })
 };
+
+
+function validadorDeSenha (input){
+        const senha = document.querySelector('#inputPassword4').value;
+        const confirmaSenha = input.value;
+        const erro = document.querySelector('.erroTeste');
+        if (senha === confirmaSenha) {
+                /* erro.style.display = 'none';
+                erro.innerText = ''; */
+                test = true;
+                
+        } else {
+                /* erro.style.display = 'block';
+                erro.innerText = 'As senhas não conferem.';    */
+                test = false;     
+        };
+
+}
+
+let test = true;
+document.querySelector('.btn').onclick = (event) =>{
+        
+        if (!test){
+                event.preventDefault();
+                
+        } else {
+                alert('Cadastrado com sucesso');
+        };
+}

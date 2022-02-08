@@ -15,3 +15,10 @@
 body{
     background: #FFFFA3;
 }
+
+.input-mensagem-erro{
+    display: none;
+}
+.form-group-erro .input-mensagem-erro{
+    display: block;
+}
