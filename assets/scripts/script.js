@@ -132,15 +132,12 @@ function buscaCep() {
 function validadorDeSenha (input){
         const senha = document.querySelector('#inputPassword4').value;
         const confirmaSenha = input.value;
-        const erro = document.querySelector('.erroTeste');
         if (senha === confirmaSenha) {
-                /* erro.style.display = 'none';
-                erro.innerText = ''; */
+                
                 test = true;
                 
         } else {
-                /* erro.style.display = 'block';
-                erro.innerText = 'As senhas não conferem.';    */
+                
                 test = false;     
         };
 
