@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,13 +42,13 @@
     <br>
     <form class="row g-3">
       <div class="col-12 form-group">
-        <label for="inputName" class="form-label">Nome Completo</label>
-        <input type="text" class="form-control" id="inputName" placeholder="Nome do responsável">
+        <label for="inputNameResponsavel" class="form-label">Nome Completo</label>
+        <input type="text" class="form-control" id="inputNameResponsavel" placeholder="Nome do responsável">
         <span class="input-mensagem-erro">Este campo não está válido</span>
       </div>
       <div class="col-12 form-group">
-        <label for="inputName" class="form-label">Aluno</label>
-        <input type="text" class="form-control" id="inputName" placeholder="Nome do aluno">
+        <label for="inputNameAluno" class="form-label">Aluno</label>
+        <input type="text" class="form-control" id="inputNameAluno" placeholder="Nome do aluno">
         <span class="input-mensagem-erro">Este campo não está válido</span>
       </div>
       <div class="col-md-6 form-group">
@@ -77,22 +78,22 @@
       </div>
       <div class="col-md-6 form-group">
         <label for="inputCity" class="form-label">Cidade</label>
-        <input type="text" class="form-control" id="inputCity">
+        <input type="text" class="form-control" id="inputCity" disabled>
         <span class="input-mensagem-erro">Este campo não está válido</span>
       </div>
       <div class="col-md-4 form-group">
         <label for="inputState" class="form-label">Estado</label>
-        <input id="text" class="inputState">
+        <input id="text" class="inputState" disabled>
         <span class="input-mensagem-erro">Este campo não está válido</span>
       </div>
       <div class="col-12 form-group">
         <label for="inputBairro" class="form-label">Bairro</label>
-        <input type="text" class="form-control" id="inputBairro">
+        <input type="text" class="form-control" id="inputBairro" disabled>
         <span class="input-mensagem-erro">Este campo não está válido</span>
       </div>
       <div class="col-12 form-group">
         <label for="inputRua" class="form-label">Rua</label>
-        <input type="text" class="form-control" id="inputRua">
+        <input type="text" class="form-control" id="inputRua" disabled>
         <span class="input-mensagem-erro">Este campo não está válido</span>
       </div>
       <div class="col-12 form-group">
@@ -114,6 +115,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
   </script>
-  <script src="./assets/scripts/app_validacao.js"></script>
+  <script src="./assets/scripts/app_validacao.js" type="model"></script>
 </body>
+
 </html>
