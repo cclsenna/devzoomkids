@@ -53,15 +53,28 @@ body {
     text-align: center;
 }
 
-#botao-recuperar{
+#botao-modal-recuperar,#botao-modal-redefinir,#botao-recuperar{
     background-color:#F34213;
     border-color:#000;
 }
 
-#botao-recuperar:hover{
+#botao-modal-recuperar:hover,#botao-modal-redefinir:hover,#botao-recuperar:hover{
     background-color:grey;
     border-color: #000;
 
 
 }
+
+
+#cont{
+    height: 350px;
+    border: 2px solid #F34213;
+}
+
+#form-recup{
+    flex-grow: 1;
+
+}
+
+
 

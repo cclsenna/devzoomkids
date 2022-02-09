@@ -156,3 +156,4 @@ document.querySelector('.btn').onclick = (event) =>{
                 alert('Cadastrado com sucesso');
         };
 }
+

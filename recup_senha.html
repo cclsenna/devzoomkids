@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/styles.css">    
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script defer src="./assets/scripts/script.js"></script>
+    <script defer src="./assets/scripts/comportamentos.js"></script>
     <title>Recuperação de Senha</title>
 </head>
 <body>
@@ -25,7 +26,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
               <ul class="navbar-nav">
                 <li><a class="nav-link active text-color" aria-current="page" href="./index.html">Início</a></li>
-                <li><a class="nav-link text-color" href="#">Sobre</a></li>
+                <li><a class="nav-link text-color" href="./Servicos.html">Sobre</a></li>
                 <li><a class="nav-link text-color" href="#">Contato</a></li>
                 <li><a class="nav-link text-color" href="./paginaListaDeEspera.html">Cadastro</a></li>
                 <li><a class="nav-link text-color" href="#">Login</a></li>
@@ -37,18 +38,18 @@
     <!-- FIM DO HEADER -->
      <main class="p-5 container-senha">
        <h2 class="mb-5">Recuperação de Senha</h2>
-       <section class="bg-body w-50 h-50 mx-auto p-3 rounded">
-        <form action="#">
-          <div class="mb-3">
+
+
+       <section class="d-flex flex-column  bg-body container-sm w-50 rounded" id="cont">
+
+        <form action="#" class="d-flex flex-column justify-content-around align-items-center" id="form-recup">
+          <div class="mb-3 d-flex flex-column justify-content-between">
             <label for="exampleInputEmail1" class="form-label fw-bold">Digite o endereço de email cadastrado</label>
-            <input type="email" class="form-control w-75 mx-auto" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="usuario@mail.com.br">
-            <div id="emailHelp" class="form-text">Caso já tenha recebido o código <a href="./redefinir_senha.html">clique aqui</a>.</div>
+            <input type="email" class="form-control  mx-auto" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="usuario@mail.com.br">
+            <div id="emailHelp" class="form-text">Caso já tenha recebido sua senha provisória <a href="./redefinir_senha.html">clique aqui</a>.</div>
           </div>         
           <button type="button" class="btn btn-primary" id="botao-recuperar" data-bs-toggle="modal" data-bs-target="#exampleModal">Enviar Email</button>
         </form>
-
-
-
 
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
@@ -58,15 +59,16 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                Senha enviada para o seu email.
-                Verifique a pasta de Spam !
+                A nova senha provisória foi enviada para o seu email.
+                Lembre-se de verificar também a pasta de SPAM.
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continuar</button>
+                <button type="button" class="btn btn-secondary" id="botao-modal-recuperar" data-bs-dismiss="modal">Continuar</button>
               </div>
             </div>
           </div>
         </div>
+        
 
        </section>
 
