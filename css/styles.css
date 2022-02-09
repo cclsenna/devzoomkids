@@ -38,6 +38,12 @@ body {
     box-shadow: 0px 6px 17px 1px rgba(255,214,120,0.74);
 }
 
+.footer-config {
+    background-color: #FFFFFF;
+    border-top: 3px solid rgba(243, 66, 19);
+    box-shadow: 0px -6px 17px 1px rgba(255,214,120,0.74);
+}
+
 .carousel {
     overflow: hidden;
     height: 20rem;
