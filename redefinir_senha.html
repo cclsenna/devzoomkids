@@ -39,35 +39,27 @@
      <main class="p-5 container-senha">
        <h2 class="mb-5">Redefinir senha</h2>
 
-       <section class="d-flex flex-column  bg-body container-sm w-50 rounded" id="cont">
-        <div class="row g-3 align-items-center">
-          <div class="col-auto">
-            <label for="inputPassword6" class="col-form-label">Senha atual: </label>
-          </div>
-          <div class="col-auto">
-            <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
-          </div>          
+       <section class="d-flex flex-column  align-items-center  bg-body container-sm w-50 rounded" id="cont">
+
+      <form action="#" class="w-75 h-100 d-flex flex-column justify-content-around align-items-center">
+        <div class="form-floating w-75">
+          <input type="password" class="form-control" id="floatingPassword1" placeholder="Senha antiga" autocomplete="off">
+          <label for="floatingPassword1">Senha Antiga</label>          
         </div>
-        <br>
-        <div class="row g-3 align-items-center">
-          <div class="col-auto">
-            <label for="inputPassword6" class="col-form-label">Nova Senha: </label>
-          </div>
-          <div class="col-auto">
-            <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
-          </div>          
+        <div class="form-floating w-75">
+          <input type="password" class="form-control" id="floatingPassword2" placeholder="Nova Senha" autocomplete="off">
+          <label for="floatingPassword2">Nova Senha</label>
+          <div id="emailHelp" class="form-text">A senha deve ter entre 8 e 20 caracteres.</div>
+
         </div>
-        <br>
-        <div class="row g-3 align-items-center">
-          <div class="col-auto">
-            <label for="inputPassword6" class="col-form-label">Repita a nova senha: </label>
-          </div>
-          <div class="col-auto">
-            <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
-          </div>          
-        </div>
-        <br>
-        <button type="button" class="btn btn-primary" id="botao-recuperar" data-bs-toggle="modal" data-bs-target="#exampleModal">Enviar Email</button>
+        <div class="form-floating w-75">
+          <input type="password" class="form-control" id="floatingPassword3" placeholder="Repita a nova senha" autocomplete="off">
+          <label for="floatingPassword3">Repita a nova senha</label>
+        </div>        
+        <button type="button" class="btn btn-primary" id="botao-recuperar" data-bs-toggle="modal" data-bs-target="#exampleModal">Alterar Senha</button>
+
+      </form>
+
 
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
