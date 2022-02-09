@@ -1,0 +1,24 @@
+*{
+    margin:0;
+    padding: 0;
+}
+  
+.navbrand {
+    height: 6rem;
+}
+  
+.text-color {
+    font-weight: 500;
+    color: rgba(243, 66, 19, 0.8)!important;
+}
+
+body{
+    background: #FFFFA3;
+}
+
+.input-mensagem-erro{
+    display: none;
+}
+.form-group-erro .input-mensagem-erro{
+    display: block;
+}
