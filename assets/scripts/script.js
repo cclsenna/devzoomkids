@@ -1,44 +1,47 @@
-
-//Função para verificar o tipo de input e fazer a manipulação de DOM caso encontre algum erro.
-
+//Função principal - recebe o input do HTML;
 export function valida(input) {
+        //Variável recebe como valor o campo de input, e seleciona o data attribute do tipo -  tipo.
         const tipoDeInput = input.dataset.tipo
-        //Verifica se existe alguma condição especial para o preenchimento do imput.
+        //Passa para função validadores o dataset do input e o valor do input.
 
         if (validadores[tipoDeInput]) {
                 validadores[tipoDeInput](input);
         };
 
-        //Verifica o atributo (.valid) do objeto input, caso seja TRUE, remove a classe de erro (form-group--invalido).
+        //Verifica o atributo do valor do input, no campo de validity, se o attribute .valid é true ou false. 
+
 
         if (input.validity.valid) {
+
+                //Caso o retorno seja true, remove a mensagem de erro.
+
                 input.parentElement.classList.remove('form-group-erro');
                 input.parentElement.querySelector('.input-mensagem-erro').innerHTML = '';
 
-                //Caso encontre o erro de imput ou o erro de função, adiciona a classe de erro (form-group--invalido).
-
+                //Caso o retorno seja false, adiciona a mensagem de erro através da função mostraMensagemDeErro. (manipulação de DOM)
         } else {
                 input.parentElement.classList.add('form-group-erro');
                 input.parentElement.querySelector('.input-mensagem-erro').innerHTML = mostraMensagemDeErro(tipoDeInput, input);
+
         };
 };
 
-//Objeto contendo a lista de erros.
+//Vetor contendo a lista de erros. Erros retirados dos atributos de validação de campos.
 
 const tiposDeErro = [
         'valueMissing',
         'typeMismatch',
         'patternMismatch',
         'customError'
-] 
+]
 
-//Objeto contendo as mensagens de erro.
+//Objeto que contem as mensagens de erro, onde cada atributo é um data data attributes, contendo um valor de validação do objeto.
 
 const mensagensDeErro = {
         nomeResponsavel: {
                 valueMissing: 'O campo de nome do responsavel não pode estar vazio.'
         },
-        
+
         nomeAluno: {
                 valueMissing: 'O campo nome não pode estar vazio.'
         },
@@ -55,7 +58,7 @@ const mensagensDeErro = {
 
         confirmarSenha: {
                 valueMissing: 'O campo de confirmação de senha não pode estar vazio.',
-                customError: 'As senhas devem ser iguais.'
+                customError: 'As senhas não correspondem.'
         },
 
         rg: {
@@ -79,14 +82,15 @@ const mensagensDeErro = {
 
 };
 
-//Objeto para erros de função ou com funções específicas.
+//Objeto para erros de função ou com funções específicas (customErros).
 
 const validadores = {
-        confirmarSenha: input => validadorDeSenha (input),
+        confirmarSenha: input => validadorDeSenha(input),
+        rg: input => validadorDeRg(input)
 
 };
 
-//Função para selecionar dentro dos objetos o erro e o tipo de erro, retornando o valor da mensagem,
+//Função para selecionar dentro dos objetos o erro e o tipo de erro, retornando o valor da mensagem.
 function mostraMensagemDeErro(tipoDeInput, input) {
         let mensagem = '';
         tiposDeErro.forEach(erro => {
@@ -98,62 +102,54 @@ function mostraMensagemDeErro(tipoDeInput, input) {
         return mensagem;
 }
 
-//Criando evento para auto preenchimento quando fora de foco;
- $('#inputZip').on('focusout', function (event) {
+//Criando evento para auto preenchimento quando fora de foco.
+$('#inputZip').on('focusout', function (event) {
         event.preventDefault();
         buscaCep();
-}); 
- 
-//Declarando a função buscaCep, que faz a solicitação à API;
+});
+
+//Declarando a função buscaCep, que faz a solicitação à API.
 function buscaCep() {
         let cep = document.querySelector('#inputZip').value.replace(/\D/g, '');
         $.ajax({
                 url: `https://viacep.com.br/ws/${cep}/json/`,
                 method: 'GET',
 
-                //Caso tenha sucesso ele busca o (parametro);
+                //Caso tenha sucesso ele busca o (parametro).
                 success: function (parametro) {
 
-                        //Realiza a manipulação de DOM, preenchendo os campos;
+                        //Realiza a manipulação de DOM, preenchendo os campos.
                         $('#inputState').val(parametro.uf);
                         $('#inputCity').val(parametro.localidade);
                         $('#inputBairro').val(parametro.bairro);
                         $('#inputRua').val(parametro.logradouro);
 
                 },
-                //Tratamento de ERRO;
+                //Tratamento de ERRO.
                 error: function () {
 
                 }
         })
 };
 
-
-function validadorDeSenha (input){
+//Função para validação de senha, comparando os valores dos campos senha e conformação de senha. Se o valor for diferente retorna mensagem específica (customErro).
+function validadorDeSenha(input) {
         const senha = document.querySelector('#inputPassword4').value;
         const confirmaSenha = input.value;
-        const erro = document.querySelector('.erroTeste');
-        if (senha === confirmaSenha) {
-                /* erro.style.display = 'none';
-                erro.innerText = ''; */
-                test = true;
-                
-        } else {
-                /* erro.style.display = 'block';
-                erro.innerText = 'As senhas não conferem.';    */
-                test = false;     
-        };
-
+        let mensagem = '';
+        if (senha != confirmaSenha) {
+                mensagem = 'As senhas não correspondem.';
+        }
+        input.setCustomValidity(mensagem);
 }
 
-let test = true;
-document.querySelector('.btn').onclick = (event) =>{
-        
-        if (!test){
-                event.preventDefault();
-                
-        } else {
-                alert('Cadastrado com sucesso');
-        };
-}
+//Função para validação do RG, trata o tamanho do rg (considerando apenas números), caso o tamanho dele for menor que 8 caracteres (considerando os 0 a esquerda) e maior que 9 caracteres retorna mensagem específica (customErro).
+function validadorDeRg(input) {
+        const rg = input.value.replace(/\D/g, '');
+        let mensagem = '';
+        if (rg.length < 8 || rg.length > 9) {
+                mensagem = 'O RG digitado é inválido'
 
+        };
+        input.setCustomValidity(mensagem);
+};
