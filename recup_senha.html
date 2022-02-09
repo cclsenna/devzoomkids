@@ -40,16 +40,18 @@
        <h2 class="mb-5">Recuperação de Senha</h2>
 
 
-       <section class="d-flex flex-column  bg-body container-sm w-50 rounded" id="cont">
+       <section class="d-flex flex-column bg-body justify-content-center container-sm w-50  rounded" id="cont">
 
-        <form action="#" class="d-flex flex-column justify-content-around align-items-center" id="form-recup">
-          <div class="mb-3 d-flex flex-column justify-content-between">
-            <label for="exampleInputEmail1" class="form-label fw-bold">Digite o endereço de email cadastrado</label>
-            <input type="email" class="form-control  mx-auto" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="usuario@mail.com.br">
+        <form action="#">
+          <div class="mb-5">
+            <label for="exampleInputEmail1" class="form-label fw-bold mb-3">Digite o endereço de email cadastrado</label>
+            <input type="email" class="form-control w-50 mx-auto mb-3" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="usuario@mail.com.br">
             <div id="emailHelp" class="form-text">Caso já tenha recebido sua senha provisória <a href="./redefinir_senha.html">clique aqui</a>.</div>
           </div>         
           <button type="button" class="btn btn-primary" id="botao-recuperar" data-bs-toggle="modal" data-bs-target="#exampleModal">Enviar Email</button>
         </form>
+
+
 
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
