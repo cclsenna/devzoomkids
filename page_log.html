@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,8 +15,7 @@
   <script defer src="./assets/scripts/script.js"></script>
   <title>Recuperação de Senha</title>
 </head>
-
-<body>
+<body class="d-flex flex-column min-vh-100">
   <!-- HEADER -->
   <header class="novo-bg">
     <nav class="navbar navbar-light navbar-expand-lg bg-transparent justify-content-between ms-2 me-2">
@@ -32,7 +30,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <ul class="navbar-nav">
             <li><a class="nav-link active text-color" aria-current="page" href="./index.html">Início</a></li>
-            <li><a class="nav-link text-color" href="#">Sobre</a></li>
+            <li><a class="nav-link text-color" href="Servicos.html">Sobre</a></li>
             <li><a class="nav-link text-color" href="#">Contato</a></li>
             <li><a class="nav-link text-color" href="./paginaListaDeEspera.html">Cadastro</a></li>
             <li><a class="nav-link text-color" href="#">Login</a></li>
@@ -42,57 +40,42 @@
     </nav>
   </header>
   <!-- FIM DO HEADER -->
-  <main>
-
-
-    <p class="textLab">Fazer login:</p>
-
-    <section class="formulario_container">
-
+  <main class="container d-flex flex-column justify-content-center align-items-center altura-main w-lg-75">
+    <p class="text-center display-5">Fazer login:</p>
+    <section class="formulario_container w-75 d-flex flex-column align-items-center">
       <!--LOGIN DO SITE-->
-
       <form action="./index.html">
         <div class="container_gr1">
           <!--input-->
-
           <input type="email" class="form-control" id="email1" placeholder="Digite seu email"
             aria-describedby="emailHelp" required>
         </div>
-
         <div class="senha">
           <label for="password"></label>
           <input type="password" class="form-control" id="password1" placeholder="Senha" required>
         </div>
-
-
         <div>
-
           <!--button-->
-          <div class="page2">
+          <div class="page2 d-flex justify-content-center">
             <button type="submit" class="botaoLog">Entrar</button>
-
           </div>
-
-
           <!--checkbox-->
           <div class="check3">
-            <input type="checkbox" class="checarImput_1" id="ChecarImput">
+            <input type="checkbox" class="checarInput_1" id="ChecarImput">
             <label class="lembrarS" for="checarSenha">Lembrar Senha</label>
-
             <!--Esqueceu a Senha-->
             <a href="./recup_senha.html" class="esqueceuSenha">Esqueceu a senha?</a>
-
           </div>
-
-
       </form>
-
-
     </section>
-
-
-
   </main>
+  <!-- RODAPÉ -->
+  <footer class="footer-config text-center mt-auto">
+    <div class="text-center p-1 text-color">
+      Dev Zoom Kids © 2022
+    </div>
+  </footer>
+  <!-- FIM DO RODAPÉ -->
 </body>
-
+</body>
 </html>

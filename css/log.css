@@ -1,48 +1,33 @@
-form{
-
-
-   width: 400px;
-   padding: 40px;
+form {
+   padding: 2rem;
    margin: auto;
-   background-color: #7F6E33;
-   border-radius: 10px;
-
-
+   background-color: #FFFFFF;
+   border: 2px solid #F34213;
+   border-radius: 5px;
 }
 
-.botaoLog{
-
-   
+.botaoLog {   
     margin-top: 20px;
     padding: 6px;
     margin-bottom: 10px;
-    width: 319px;
     border-radius: 5px;
     box-sizing: border-box;
-
-
 }
 
-
-
-.checarImput_1{
-
+.checarInput_1 {
     margin-left: 2px;
 }
 
-.esqueceuSenha{
-
-
+.esqueceuSenha {
     margin-left: 55px;
     text-decoration: none;
     color: white;
 }
 
-.textLab{
-
-
-    text-align: center;
-    margin-top: 100px;
-    font-size: 25px;
+.display-5 {
+    color: #F34213;
 }
 
+.altura-main {
+    height: 70vh;
+}
