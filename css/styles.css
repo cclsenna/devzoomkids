@@ -1,6 +1,9 @@
 body {
     background-color: #FFFFA3!important;
 }
+h3{
+    font-size: 20px;
+}
 
 .navbrand {
     height: 4.6rem;
@@ -63,19 +66,34 @@ body {
     text-align: center;
 }
 
-#botao-modal-recuperar,#botao-modal-redefinir,#botao-recuperar{
+#botao-modal-redefinir,#botao-recuperar,#botao-redefinir{
     background-color:#F34213;
     border-color:#000;
 }
 
-#botao-modal-recuperar:hover,#botao-modal-redefinir:hover,#botao-recuperar:hover{
-    background-color:grey;
-    border-color: #000;
+#botao-modal-redefinir:hover,#botao-recuperar:hover,#botao-redefinir:hover{
+    background-color:white;
+    border-color: #F34213;
+    color: black;
+
+
 }
 
-#cont {
+#cont{
+    
     height: 350px;
     border: 2px solid #F34213;
+}
+
+#cont2{
+    height: 350px;
+    border: 2px solid #F34213;
+}
+
+#emailSuccess{
+    display: none;
+    color: #F34213;
+    font-size: 16px;
 }
 
 
