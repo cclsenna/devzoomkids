@@ -43,7 +43,7 @@ const mensagensDeErro = {
         },
 
         nomeAluno: {
-                valueMissing: 'O campo nome não pode estar vazio.'
+                valueMissing: 'O campo nome do aluno não pode estar vazio.'
         },
 
         email: {
@@ -86,7 +86,8 @@ const mensagensDeErro = {
 
 const validadores = {
         confirmarSenha: input => validadorDeSenha(input),
-        rg: input => validadorDeRg(input)
+        rg: input => validadorDeRg(input),
+        cep: input => buscaCep(input)
 
 };
 
@@ -102,21 +103,15 @@ function mostraMensagemDeErro(tipoDeInput, input) {
         return mensagem;
 }
 
-//Criando evento para auto preenchimento quando fora de foco.
-$('#inputZip').on('focusout', function (event) {
-        event.preventDefault();
-        buscaCep();
-});
-
 //Declarando a função buscaCep, que faz a solicitação à API.
-function buscaCep() {
-        let cep = document.querySelector('#inputZip').value.replace(/\D/g, '');
+function buscaCep(input) {
+        let cep = input.value.replace(/\D/g, '');    
         $.ajax({
                 url: `https://viacep.com.br/ws/${cep}/json/`,
                 method: 'GET',
 
                 //Caso tenha sucesso ele busca o (parametro).
-                success: function (parametro) {
+                success: (parametro) => {
 
                         //Realiza a manipulação de DOM, preenchendo os campos.
                         $('#inputState').val(parametro.uf);
@@ -126,10 +121,10 @@ function buscaCep() {
 
                 },
                 //Tratamento de ERRO.
-                error: function () {
+                error: () => {
 
                 }
-        })
+        });
 };
 
 //Função para validação de senha, comparando os valores dos campos senha e conformação de senha. Se o valor for diferente retorna mensagem específica (customErro).
@@ -139,17 +134,18 @@ function validadorDeSenha(input) {
         let mensagem = '';
         if (senha != confirmaSenha) {
                 mensagem = 'As senhas não correspondem.';
-        }
+        };
         input.setCustomValidity(mensagem);
-}
+};
 
 //Função para validação do RG, trata o tamanho do rg (considerando apenas números), caso o tamanho dele for menor que 8 caracteres (considerando os 0 a esquerda) e maior que 9 caracteres retorna mensagem específica (customErro).
 function validadorDeRg(input) {
         const rg = input.value.replace(/\D/g, '');
         let mensagem = '';
-        if (rg.length < 8 || rg.length > 9) {
-                mensagem = 'O RG digitado é inválido'
-
+      
+        if (rg.length > 0 && rg.length < 8 || rg.length > 9) {
+                mensagem = 'O RG digitado é inválido';
+                input.setCustomValidity(mensagem);
         };
-        input.setCustomValidity(mensagem);
+        
 };
