@@ -47,6 +47,11 @@ section .pricing {
 .fas {
   color: #634133;
 }
+
+.fab {
+  color: #231C07;
+  font-size: 1.8rem;
+}
   
 .pricing .text-muted {
   opacity: 0.7;
@@ -72,6 +77,11 @@ section .pricing {
 
 .display-5, .display-6 {
   color: #F34213;
+}
+
+.accordion {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(243, 66, 19);
 }
 
   /* Hover Effects on Card */
