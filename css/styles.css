@@ -1,6 +1,5 @@
 body {
-    background-color: #FFFFA3;
-    height: 100vh;
+    background-color: #FFFFA3!important;
 }
 
 .navbrand {
@@ -12,12 +11,17 @@ body {
     color: rgba(243, 66, 19, 0.8)!important;
 }
 
-.text-color-slide {
+.text-link {
+    color: #F34213;
+    text-decoration: none;
+}
+
+.text-color-slide, .text-link:hover {
     color: #231C07;
 }
 
 .text-homepage > h1 {
-    font-weight: 500;
+    font-weight: 400;
     color: #F34213;
 }
 
@@ -55,7 +59,7 @@ body {
     height: 400px;
 }
 
-.container-senha{
+.container-senha {
     text-align: center;
 }
 
@@ -67,12 +71,9 @@ body {
 #botao-modal-recuperar:hover,#botao-modal-redefinir:hover,#botao-recuperar:hover{
     background-color:grey;
     border-color: #000;
-
-
 }
 
-
-#cont{
+#cont {
     height: 350px;
     border: 2px solid #F34213;
 }

@@ -1,30 +1,12 @@
-
-*{
-  margin:0;
-  padding: 0;
-}
-
 .navbrand {
   height: 6rem;
 }
 
-.text-color {
-  font-weight: 500;
-  color: rgba(243, 66, 19, 0.8)!important;
-}
-
-h1{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 30%;
-  color: #231C07;
+.p {
   text-align: center;
 }
 
-.p{
-  text-align: center;
-}
-
-section.pricing {
+section .pricing {
   margin-top: -65px;
   background: #FFFFA3;
 }
@@ -42,7 +24,7 @@ section.pricing {
 .pricing .card-title {
   margin: 0.5rem 0;
   font-size: 2rem;
-  color: #634133;
+  color: #231C07;
   letter-spacing: .1rem;
   font-weight: bold;
 }
@@ -62,8 +44,8 @@ section.pricing {
   margin-bottom: 1rem;
 }
 
-.fa-li{
-  color: #231C07;
+.fas {
+  color: #634133;
 }
   
 .pricing .text-muted {
@@ -86,6 +68,10 @@ section.pricing {
   background-color: #FFFFFF;
   border-top: 1px solid rgba(243, 66, 19);
   box-shadow: 0px -6px 17px 1px rgba(255,214,120,0.74);
+}
+
+.display-5, .display-6 {
+  color: #F34213;
 }
 
   /* Hover Effects on Card */
