@@ -1,6 +1,9 @@
 body {
     background-color: #FFFFA3!important;
 }
+h3{
+    font-size: 20px;
+}
 
 .navbrand {
     height: 4.6rem;
@@ -77,6 +80,12 @@ body {
 }
 
 #cont{
+    
+    height: 350px;
+    border: 2px solid #F34213;
+}
+
+#cont2{
     height: 350px;
     border: 2px solid #F34213;
 }

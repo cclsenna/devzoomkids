@@ -18,7 +18,7 @@
 
     <title>Recuperação de Senha</title>
 </head>
-<body class="d-flex flex-column justify-content-between">
+<body class="d-flex flex-column min-vh-100">
   <!-- HEADER -->
     <header class="novo-bg">
         <nav class="navbar navbar-light navbar-expand-lg bg-transparent justify-content-between ms-2 me-2">
@@ -34,7 +34,7 @@
                 <li><a class="nav-link active text-color" aria-current="page" href="./index.html">Início</a></li>
                 <li><a class="nav-link text-color" href="./Servicos.html">Sobre</a></li>
                 <li><a class="nav-link text-color" href="#">Contato</a></li>
-                <li><a class="nav-link text-color" href="./paginaListaDeEspera.html">Cadastro</a></li>
+                <li><a class="nav-link text-color" href="./NovoCadastro.htm">Cadastro</a></li>
                 <li><a class="nav-link text-color" href="./page_log.html">Login</a></li>
               </ul>
             </div>
@@ -45,24 +45,37 @@
      <main class="p-5 container-senha">
        <h2 class="mb-5">Recuperação de Senha</h2>
 
-
-       <section class="d-flex flex-column bg-body justify-content-center container-sm w-50  rounded" id="cont">
+       <section class="d-flex flex-column bg-body justify-content-center container-sm w-50  rounded" id="cont" name="form-recup">
         <form class="form-pass">
-          <div class="mb-5">
+          <div class="mb-5" id="recup-senha">
             <label for="inputEmail4" class="form-label fw-bold mb-3">Digite o endereço de email cadastrado</label>
             <input type="email" class="form-control w-50 mx-auto mb-3" id="inputEmail4" data-tipo="email" aria-describedby="emailHelp" placeholder="usuario@mail.com.br" required>
             <span class="input-mensagem-erro">Este campo não está válido</span>
-            <div id="emailHelp" class="form-text">Caso já tenha recebido sua senha provisória <a href="./redefinir_senha.html">clique aqui</a>.</div>
-            <span id="emailSuccess" >Senha provisória enviada para o seu email cadastrado. Siga as orientações.</span>
-          </div>         
-          <button type="submit" class="btn btn-primary" id="botao-recuperar">Enviar Email</button>
+            <div id="emailHelp" class="form-text">Caso já tenha recebido um código válido <a href="./redefinir_senha.html">clique aqui</a>.</div>
+            <span id="emailSuccess" >Senha provisória enviada para o seu email cadastrado. Siga as orientações para realizar o rest de senha.</span>
+          </div>                 
+          <button type="submit" class="btn btn-primary" id="botao-recuperar">Enviar Email</button>          
         </form>
-
-
-
-        
-
+       
        </section>
+
+
+       <section class="d-none flex-column  align-items-center  bg-body container-sm w-50 rounded" id="cont2">
+
+        <form  action='./redefinir_senha.html' class="w-75 h-100 d-flex flex-column justify-content-center align-items-center" name="form-reset"> 
+          <h3>Enviamos o código para o seu email</h3>
+          <p>Insira o código de verificação de 4 dígitos enviado para o seu email.</p>                
+          <div class="form-floating w-75 mb-4 mt-4">
+            <input type="password" class="form-control" id="inputPassword4" placeholder="Código de 4 digitos" data-tipo="senha" required autocomplete="off" minlength="4" maxlength="4">
+            <label for="inputPassword4">Código de 4 dígitos</label>
+            <div id="emailHelp" class="form-text">Caso não tenha recebido, clique para <a href="#">reenviar</a></div>
+
+          </div>                
+          <button type="submit" class="btn btn-primary" id="botao-redefinir" data-bs-toggle="modal" data-bs-target="#exampleModal">Alterar Senha</button>
+  
+        </form>
+        </section>
+  
 
        
 
