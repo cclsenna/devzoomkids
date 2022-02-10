@@ -60,13 +60,23 @@ main{
 }
 
 .pricing .btn {
+  background-color: #F34213 !important;
   font-size: 80%;
   border-radius: 5rem;
+  border-color: #F34213 !important;
   letter-spacing: .1rem;
   font-weight: bold;
   padding: 1rem;
   opacity: 0.7;
   transition: all 0.2s;
+}
+
+.img{
+  width: 550px;
+  height: 130px;
+  color: rgb(227, 178, 60);
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 /* Hover Effects on Card */
@@ -79,6 +89,8 @@ main{
   }
 
   .pricing .card:hover .btn {
+    background-color: #ca3b13 !important;
+    border-color: #ca3b13 !important;
     opacity: 1;
   }
 }
