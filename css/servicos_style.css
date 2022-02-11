@@ -6,21 +6,21 @@
   text-align: center;
 }
 
-section .pricing {
-  margin-top: -65px;
+main{
   background: #FFFFA3;
 }
-  
+
 .pricing .card {
-  border-color: #F34213 ;
+  border: none;
   border-radius: 1rem;
   transition: all 0.2s;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
 }
-  
+
 .pricing hr {
   margin: 1.5rem 0;
 }
-  
+
 .pricing .card-title {
   margin: 0.5rem 0;
   font-size: 2rem;
@@ -28,18 +28,16 @@ section .pricing {
   letter-spacing: .1rem;
   font-weight: bold;
 }
-  
+
 .pricing .card-price {
-  font-size: 0.9rem;
-  color: #634133;
+  font-size: 3rem;
   margin: 0;
 }
-  
+
 .pricing .card-price .period {
   font-size: 0.8rem;
-  color: #634133;
 }
-  
+
 .pricing ul li {
   margin-bottom: 1rem;
 }
@@ -56,15 +54,15 @@ section .pricing {
 .pricing .text-muted {
   opacity: 0.7;
 }
-  
+
 .pricing .btn {
-  background-color:#F34213;
+  background-color: #F34213 !important;
   font-size: 80%;
   border-radius: 5rem;
+  border-color: #F34213 !important;
   letter-spacing: .1rem;
   font-weight: bold;
   padding: 1rem;
-  border-bottom-color: #F34213;
   opacity: 0.7;
   transition: all 0.2s;
 }
@@ -87,22 +85,15 @@ section .pricing {
   /* Hover Effects on Card */
   
 @media (min-width: 992px) {
-
   .pricing .card:hover {
-    margin-top: -0.80rem;
-    margin-left: -0.80rem;
-    margin-right: -0.80rem;
-    margin-bottom: -0.25rem;
-    box-shadow: 0 0.5rem 2rem 0 #c73811;
+    margin-top: -.25rem;
+    margin-bottom: .25rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
   }
-
-  .card-body:hover h2 {
-    color: #c73811;
-  }
-      
 
   .pricing .card:hover .btn {
-    background-color: #F34213;;
+    background-color: #ca3b13 !important;
+    border-color: #ca3b13 !important;
     opacity: 1;
   }
 }
