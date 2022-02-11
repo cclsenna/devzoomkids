@@ -21,9 +21,12 @@ form {
 .esqueceuSenha {
     margin-left: 55px;
     text-decoration: none;
-    color: white;
+    color: #231C07;
 }
 
+.esqueceuSenha {
+    color: #F34213;
+}
 .display-5 {
     color: #F34213;
 }
