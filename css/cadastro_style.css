@@ -16,6 +16,46 @@ body{
     background: #FFFFA3;
 }
 
+.cadastro{
+    background-color: #FFFFA3;
+    padding: 100px;
+}
+
+.bloco{
+    padding: -10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.bloco1{
+    padding: -10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+}
+
+.bloco2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: stretch;
+
 .input-mensagem-erro{
     display: none;
 }
