@@ -48,18 +48,19 @@
 
       <form  class="w-75 h-100 d-flex flex-column justify-content-around align-items-center">        
         <div class="form-floating w-75">
-          <input type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" class="form-control" id="inputPassword4" placeholder="Nova Senha" data-tipo="senha" required autocomplete="off">
+          <input type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,30}$" class="form-control input-limit" id="inputPassword4" placeholder="Nova Senha" data-tipo="senha" required autocomplete="off">
           <label for="inputPassword4">Nova Senha</label>
-          <div id="emailHelp" class="form-text">A senha deve conter entre 6 a 30 caracteres,conter ao menos um número e não deve conter simbolos.</div>
+           <!--<div id="emailHelp" class="form-text">A senha deve conter entre 6 a 30 caracteres,conter ao menos um número e não deve conter simbolos.</div> -->
+          <span class="input-mensagem-erro">Este campo não está válido</span>
 
         </div>
         <div class="form-floating w-75">
-          <input type="password" class="form-control" id="floatingPassword3" placeholder="Repita a nova senha" data-tipo="confirmarSenha" required autocomplete="off">
-          <label for="floatingPassword3">Repita a nova senha</label>
+          <input type="password" class="form-control input-limit" id="floatingPassword3" placeholder="Repita a nova senha" data-tipo="confirmarSenha" required autocomplete="off">
+          <label for="floatingPassword3">Repetir a senha</label>
           <span class="input-mensagem-erro">Este campo não está válido</span>
 
         </div>        
-        <button type="submit" class="btn btn-primary" id="botao-redefinir" data-bs-toggle="modal" data-bs-target="#exampleModal">Alterar Senha</button>
+        <button type="submit" class="btn btn-primary botao" id="botao-redefinir"  data-bs-target="#exampleModal">Alterar Senha</button>
 
       </form>
 
@@ -75,7 +76,7 @@
                 Senha redefinida com sucesso!
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" id="botao-modal-redefinir" data-bs-dismiss="modal">Seguir para o login</button>
+                <button type="button" class="btn btn-secondary botao" id="botao-modal-redefinir" data-bs-dismiss="modal">Seguir para o login</button>
               </div>
             </div>
           </div>
