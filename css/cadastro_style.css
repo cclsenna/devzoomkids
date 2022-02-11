@@ -55,6 +55,7 @@ main{
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: stretch;
+}
 
 .input-mensagem-erro{
     display: none;
