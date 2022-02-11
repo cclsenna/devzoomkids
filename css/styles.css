@@ -5,6 +5,12 @@ h3{
     font-size: 20px;
 }
 
+
+.input-limit{
+    max-width: 400px;
+}
+
+
 .navbrand {
     height: 4.6rem;
 }
@@ -66,12 +72,12 @@ h3{
     text-align: center;
 }
 
-#botao-modal-redefinir,#botao-recuperar,#botao-redefinir{
+.botao{
     background-color:#F34213;
     border-color:#000;
 }
 
-#botao-modal-redefinir:hover,#botao-recuperar:hover,#botao-redefinir:hover{
+.botao:hover{
     background-color:white;
     border-color: #F34213;
     color: black;
