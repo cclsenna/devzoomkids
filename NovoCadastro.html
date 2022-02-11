@@ -53,71 +53,77 @@
         <input type="text" class="form-control" id="inputNameResponsavel" placeholder="Nome do responsável"
         data-tipo="nomeResponsavel" required>
         <label for="floatingInput">Nome Completo</label>
-        <span class="input-mensagem-erro">Este campo não está válido</span>
+        <br>
       </div>
       <div class="form-floating mb-3">
         <input type="text" class="form-control" id="inputNameAluno" placeholder="Nome do aluno" data-tipo="nomeAluno" required>
         <label for="floatingInput">Aluno</label>
-        <span class="input-mensagem-erro">Este campo não está válido</span>
+        <br>
+      </div>
+      <div class="bloco">
+        <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="inputRg" placeholder="RG" data-tipo="rg" required>
+        <label for="floatingInput">RG</label>
       </div>
       <div class="form-floating mb-3">
         <input type="email" class="form-control" id="inputEmail4" placeholder="name@example.com" data-tipo="email" required>
         <label for="floatingInput">Email</label>
-        <span class="input-mensagem-erro">Este campo não está válido</span>
-      </div>
-      <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="inputRg" placeholder="RG" data-tipo="rg" required>
-        <label for="floatingInput">RG</label>
-        <span class="input-mensagem-erro">Este campo não está válido</span>
+        <br>
       </div>
       <div class="form-floating">
         <input type="password" class="form-control" id="inputPassword4"
         pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" placeholder="Senha" data-tipo="senha" required>
         <label for="floatingPassword">Senha</label>
-        <span class="input-mensagem-erro">Este campo não está válido</span>
       </div>
       <div class="form-floating">
         <input type="password" class="form-control" id="inputPassword5" placeholder="Senha" data-tipo="confirmarSenha">
         <label for="floatingPassword">Confirmar Senha</label>
-        <span class="input-mensagem-erro">Este campo não está válido</span>
+        <br>
       </div>
+    </div>
+    <main>
       <div class="form-floating mb-3">
         <input type="text" class="form-control" id="inputZip" placeholder="Cep" data-tipo="cep" required>
         <label for="floatingInput">Cep</label>
-        <span class="input-mensagem-erro">Este campo não está válido</span>
+        <br>
       </div>
         <!-- Desabilitado -->
-      <div class="form-floating">
+        <div class="bloco1">
+        <div class="col-12 form-group">
+          <input type="text" class="form-control" id="inputState" placeholder= "Estado" data-tipo="estado" disabled>
+          <label for="floatingInput"></label>
+          <br>
+        </div>
+      <div class="col-12 form-group">
         <input type="text" class="form-control" id="inputCity" placeholder="cidade" data-tipo="cidade" disabled>
-        <label for="floatingInput">Cidade</label>
-        <span class="input-mensagem-erro">Este campo não está válido</span>
-      </div>
-      <div class="col-md-4 form-group">
-        <label for="inputState" class="form-label">Estado</label>
-        <input type="text" class="inputState" id="inputState" data-tipo="estado" disabled>
-        <span class="input-mensagem-erro">Este campo não está válido</span>
+        <label for="floatingInput"></label>
+        <br>
       </div>
       <div class="col-12 form-group">
-        <label for="inputBairro" class="form-label">Bairro</label>
-        <input type="text" class="form-control" id="inputBairro" data-tipo="bairro" disabled>
-        <span class="input-mensagem-erro">Este campo não está válido</span>
+        <input type="text" class="form-control" id="inputBairro" placeholder="Bairro" data-tipo="bairro" disabled>
+        <label for="floatingInput" ></label>
+        <br>
       </div>
+    </div>
       <div class="col-12 form-group">
-        <label for="inputRua" class="form-label">Rua</label>
-        <input type="text" class="form-control" id="inputRua" data-tipo="rua" disabled>
-        <span class="input-mensagem-erro">Este campo não está válido</span>
+        <input type="text" class="form-control" id="inputRua" placeholder="Rua" data-tipo="rua" disabled>
+        <label for="floatingInput"></label>
+        <br>
       </div>
+    </main>
         <!-- Habilitado -->
+        <dic class="bloco2">
       <div class="form-floating mb-3">
         <input type="text" class="form-control" id="inputNumero" placeholder="numero" data-tipo="numero" required>
         <label for="floatingInput">Número</label>
-        <span class="input-mensagem-erro">Este campo não está válido</span>
+        <br>
       </div>
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="inputComplemento" placeholder="complemento" data-tipo="complemento">
+        <input type="text" class="form-control" id="inputComplemento" placeholder="complemento" data-tipo="complemento"required>
         <label for="floatingInput">Complemento</label>
-        <span class="input-mensagem-erro">Este campo não está válido</span>
+        <br>
       </div>
+    </dic>
       <div class="col-12 form-group">
         <button type="submit" class="btn btn-primary">Cadastrar</button>
       </div>
