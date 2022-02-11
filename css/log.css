@@ -21,12 +21,10 @@ form {
 .esqueceuSenha {
     margin-left: 55px;
     text-decoration: none;
-    color: #231C07;
-}
-
-.esqueceuSenha {
     color: #F34213;
 }
+
+
 .display-5 {
     color: #F34213;
 }
@@ -34,3 +32,4 @@ form {
 .altura-main {
     height: 70vh;
 }
+
