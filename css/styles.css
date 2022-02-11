@@ -83,11 +83,13 @@ h3{
     
     height: 350px;
     border: 2px solid #F34213;
+    max-width: 750px;
 }
 
 #cont2{
     height: 350px;
     border: 2px solid #F34213;
+    max-width: 750px;
 }
 
 #emailSuccess{
@@ -95,6 +97,9 @@ h3{
     color: #F34213;
     font-size: 16px;
 }
+
+
+
 
 
 
