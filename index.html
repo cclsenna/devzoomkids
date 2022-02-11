@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="css/reset.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <title>Dev Zoom Kids|Home Page</title>
+    <link rel="icon" type="image/svg" href="img/favicon.svg">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <title>Dev Zoom Kids | Home</title>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
   <!-- HEADER-->
     <header class="novo-bg">
         <nav class="navbar navbar-light navbar-expand-lg bg-transparent justify-content-between ms-2 me-2">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="https://cclsenna.github.io/projeto-final-2/">
                 <img src="img/DEV ZOOM KIDS.svg" class="navbrand" alt="Logo Dev Zoom Kids">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,17 +25,19 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
               <ul class="navbar-nav">
                 <li><a class="nav-link active text-color" aria-current="page" href="./index.html">Início</a></li>
-                <li><a class="nav-link text-color" href="#">Sobre</a></li>
+                <li><a class="nav-link text-color" href="./Servicos.html">Sobre</a></li>
                 <li><a class="nav-link text-color" href="#">Contato</a></li>
-                <li><a class="nav-link text-color" href="./paginaListaDeEspera.html">Cadastro</a></li>
-                <li><a class="nav-link text-color" href="#">Login</a></li>
+                <li><a class="nav-link text-color" href="./NovoCadastro.html">Cadastro</a></li>
+                <li><a class="nav-link text-color" href="./page_log.html">Login</a></li>
               </ul>
             </div>
           </div>
         </nav>
       </header>
     <!-- FIM DO HEADER -->
+    <!-- CONTEÚDO DA PÁGINA -->
         <main>
+    <!-- CARROSSEL -->
           <section id="carouselExampleCaptions" class="carousel slide container-fluid carousel-height px-0" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -72,31 +75,33 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
-      </section>
-      <section>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-12 col-md-6 text-homepage p-3 d-flex flex-column justify-content-center">
+          </section>
+          <!-- FIM DO CARROSSEL -->
+          <!-- TEXTO E IMAGEM -->
+          <section class="container-fluid my-3">
+            <div class="row">
+              <div class="col-12 col-md-6 text-homepage p-3 d-flex flex-column justify-content-center">
                 <h1 class="display-4">O futuro de sucesso do seu filho começa aqui!</h1>
                 <br>
                 <br>
                 <p class="text-end">Infraestrutura personalizada para cada nível de dificuldade e acordo com a idade, onde escolhemos atividades específicas com base na neurolinguistica para introduzi-los na melhor experiência e fazê-los evoluir de forma exponencial!</p>
                 <br>
-                <figure>
-                  <blockquote class="blockquote">
-                    <p>"O conhecimento lhe dará a oportunidade de fazer a diferença."</p>
-                  </blockquote>
-                  <figcaption class="blockquote-footer">
-                    Claire Fagin
-                  </figcaption>
-                </figure>
+                <a href="https://cclsenna.github.io/projeto-final-2/paginaListaDeEspera.html" class="text-center display-5 text-link">Faça já sua inscrição!</a>
+              </div>
+              <div class="col-12 col-md-6 d-flex align-items-center">
+                <div class="circulo mx-auto mb-3 mb-lg-0"></div>
+              </div>
             </div>
-            <div class="col-12 col-md-6 d-flex align-items-center">
-              <div class="circulo mx-auto mb-3 mb-lg-0"></div>
-            </div>
+          </section>
+        <!-- FIM DO TEXTO E IMAGEM -->
+        </main>
+        <!-- FIM DO CONTEÚDO PRINCIPAL -->
+        <!-- RODAPÉ -->
+        <footer class="footer-config text-center mt-auto">
+          <div class="text-center p-1 text-color">
+            Dev Zoom Kids © 2022
           </div>
-        </div>
-      </section>
-      </main>
+        </footer>
+        <!-- FIM DO RODAPÉ -->
 </body>
 </html>

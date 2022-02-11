@@ -1,0 +1,35 @@
+form {
+   padding: 2rem;
+   margin: auto;
+   background-color: #FFFFFF;
+   border: 2px solid #F34213;
+   border-radius: 5px;
+}
+
+.botaoLog {   
+    margin-top: 20px;
+    padding: 6px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.checarInput_1 {
+    margin-left: 2px;
+}
+
+.esqueceuSenha {
+    margin-left: 55px;
+    text-decoration: none;
+    color: #F34213;
+}
+
+
+.display-5 {
+    color: #F34213;
+}
+
+.altura-main {
+    height: 70vh;
+}
+
