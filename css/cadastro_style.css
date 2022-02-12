@@ -73,6 +73,7 @@ main{
 }
 
 .input-mensagem-erro{
+    color: red;
     display: none;
 }
 
