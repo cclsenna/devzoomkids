@@ -19,7 +19,7 @@
   <title>Dev Zoom Kids</title>
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100 max-vw-100">
   <!-- Menu -->
   <header class="novo-bg">
     <nav class="navbar navbar-light navbar-expand-lg bg-transparent justify-content-between ms-2 me-2">
@@ -45,11 +45,11 @@
   </header>
   <!-- FIM DO HEADER -->
   <!-- Formulário -->
-  <center class="cadastro">
+  <section class="cadastro">
     <h1>CADASTRE-SE AQUI!</h1>
     <br>
     <br>
-    <form class="form-floating">
+    <form class="form-floating ">
       <div class="form-floating mb-3">
         <input type="text" class="form-control" id="inputNameResponsavel" placeholder="Nome do responsável"
           data-tipo="nomeResponsavel" required>
@@ -89,27 +89,10 @@
           </div>
           <span class="input-mensagem-erro"></span>
         </div>
-        <div class="form-floating">
-          <input type="password" class="form-control" id="inputPassword5" placeholder="Senha" data-tipo="confirmarSenha"
-            autocomplete="off">
-          <label for="floatingPassword">Confirmar Senha</label>
-          <span class="input-mensagem-erro"></span>
-          <br>
-        </div>
-      </div>
-      <main>
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="inputZip" placeholder="Cep" data-tipo="cep" required>
-          <label for="floatingInput">Cep</label>
-          <span class="input-mensagem-erro"></span>
-          <br>
-          <br>
-        </div>
-        <!-- Desabilitado -->
-        <div class="bloco1">
-          <div class="col-12 form-group">
-            <input type="text" class="form-control" id="inputState" placeholder="Estado" data-tipo="estado" disabled>
-            <label for="floatingInput"></label>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="inputZip" placeholder="Cep" data-tipo="cep" required>
+            <label for="floatingInput">Cep</label>
+            <br>
             <br>
           </div>
           <div class="col-12 form-group">
@@ -117,46 +100,24 @@
             <label for="floatingInput"></label>
             <br>
           </div>
-          <div class="col-12 form-group">
-            <input type="text" class="form-control" id="inputBairro" placeholder="Bairro" data-tipo="bairro" disabled>
-            <label for="floatingInput"></label>
-            <br>
-          </div>
-        </div>
-        <div class="col-12 form-group">
-          <input type="text" class="form-control" id="inputRua" placeholder="Rua" data-tipo="rua" disabled>
-          <label for="floatingInput"></label>
-          <br>
-        </div>
-      </main>
-      <!-- Habilitado -->
-      <dic class="bloco2">
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="inputNumero" placeholder="numero" data-tipo="numero" required>
-          <label for="floatingInput">Número</label>
-          <span class="input-mensagem-erro"></span>
-          <br>
-        </div>
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="inputComplemento" placeholder="complemento"
-            data-tipo="complemento">
-          <label for="floatingInput">Complemento</label>
-        </div>
-        </div>
-  </center>
-  <section>
-    <div>
-      <button type="submit" class="button">Cadastrar</button>
-    </div>
-  </section>
-  <br>
-  <br>
+          <!-- Habilitado -->
+        <dic class="bloco2">
+      <div class="form-floating">
+        <input type="text" class="form-control" id="inputNumero" placeholder="numero" data-tipo="numero" required>
+        <label for="floatingInput">Número</label>
+        <br>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="inputComplemento" placeholder="complemento" data-tipo="complemento"required>
+        <label for="floatingInput">Complemento</label>
+        <br>
+      </div>
+    </section>
   <footer class="footer-config text-center mt-auto">
     <div class="text-center p-1 text-color">
       Dev Zoom Kids © 2022
     </div>
   </footer>
-
 </body>
 
 
