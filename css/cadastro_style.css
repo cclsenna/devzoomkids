@@ -21,6 +21,10 @@ body{
     padding: 100px;
 }
 
+h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 .bloco{
     padding: -10px;
     display: flex;
@@ -40,13 +44,10 @@ main{
 }
 
 .bloco1{
-    padding: -10px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
     flex-wrap: wrap;
-    align-items: stretch;
-
+    align-items: center;
 }
 
 .bloco2{
@@ -55,6 +56,20 @@ main{
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: stretch;
+}
+
+.button{
+    margin-left: 600px;
+    background-color: #F34213 !important;
+    font-size: 80%;
+    color: white;
+    border-radius: 5rem;
+    border-color: #F34213 !important;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    padding: 10px;
+    opacity: 0.7;
+    transition: all 0.2s;
 }
 
 .input-mensagem-erro{
@@ -70,3 +85,4 @@ main{
     border-top: 1px solid rgba(243, 66, 19);
     box-shadow: 0px -6px 17px 1px rgba(255,214,120,0.74);
 }
+
