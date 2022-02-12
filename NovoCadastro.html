@@ -18,7 +18,7 @@
     <title>Dev Zoom Kids</title>
   </head>
 
-  <body class="d-flex flex-column min-vh-100">
+  <body class="d-flex flex-column min-vh-100 max-vw-100">
   <!-- Menu -->
     <header class="novo-bg">
       <nav class="navbar navbar-light navbar-expand-lg bg-transparent justify-content-between ms-2 me-2">
@@ -43,94 +43,81 @@
     </header>
   <!-- FIM DO HEADER -->
   <!-- Formulário -->
-    <center class="cadastro">
-      <h1>CADASTRE-SE AQUI!</h1>
-      <br>
-      <br>
+    <main class="cadastro w-100 gap-5">
+      <h1 class="display-5 text-link ">Cadastre-se aqui!</h1>
       <form class="form-floating">
-        <div class="form-floating mb-3">
+        <div class="form-floating col-9 mb-3">
           <input type="text" class="form-control" id="inputNameResponsavel" placeholder="Nome do responsável"
           data-tipo="nomeResponsavel" required>
           <label for="floatingInput">Nome Completo</label>
-          <br>
         </div>
-        <div class="form-floating mb-3">
+        <div class="form-floating col-9 mb-3">
           <input type="text" class="form-control" id="inputNameAluno" placeholder="Nome do aluno" data-tipo="nomeAluno" required>
           <label for="floatingInput">Aluno</label>
-          <br>
         </div>
-        <div class="bloco">
-          <div class="form-floating mb-3">
+        <!--bloco rg-->
+        <div class="bloco container w-100 mx-4">
+          <div class="row">
+          <div class="form-floating col-5 mb-3">
             <input type="text" class="form-control" id="inputRg" placeholder="RG" data-tipo="rg" required>
             <label for="floatingInput">RG</label>
             </div>
-          <div class="form-floating mb-3">
+          <div class="form-floating col-5 mb-3">
             <input type="email" class="form-control" id="inputEmail4" placeholder="name@example.com" data-tipo="email" required>
-            <label for="floatingInput">Email</label>
-            <br>
+            <label for="floatingInput">E-mail</label>
           </div>
-          <div class="form-floating">
+          <div class="form-floating col-5 mb-3">
             <input type="password" class="form-control" id="inputPassword4"
             pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" placeholder="Senha" data-tipo="senha" required>
             <label for="floatingPassword">Senha</label>
           </div>
-          <div class="form-floating">
-            <input type="password" class="form-control" id="inputPassword5" placeholder="Senha" data-tipo="confirmarSenha">
-            <label for="floatingPassword">Confirmar Senha</label>
-            <br>
-          </div>
+            <div class="form-floating col-5">
+              <input type="password" class="form-control" id="inputPassword5" placeholder="Senha" data-tipo="confirmarSenha">
+              <label for="floatingPassword">Confirmar Senha</label>
+            </div>
         </div>
-        <main>
+        </div>
+                <!--bloco cep-->
+        <section class="bloco1 container">
           <div class="form-floating mb-3">
             <input type="text" class="form-control" id="inputZip" placeholder="Cep" data-tipo="cep" required>
             <label for="floatingInput">Cep</label>
-            <br>
-            <br>
           </div>
           <!-- Desabilitado -->
-          <div class="bloco1">
-            <div class="col-12 form-group">
+          <div class="bloco1 mx-5">
+            <div class="col-7 form-group">
               <input type="text" class="form-control" id="inputState" placeholder= "Estado" data-tipo="estado" disabled>
               <label for="floatingInput"></label>
-              <br>
             </div>
-            <div class="col-12 form-group">
+            <div class="col-7 form-group">
               <input type="text" class="form-control" id="inputCity" placeholder="cidade" data-tipo="cidade" disabled>
               <label for="floatingInput"></label>
-              <br>
             </div>
-            <div class="col-12 form-group">
+            <div class="col-7 form-group">
               <input type="text" class="form-control" id="inputBairro" placeholder="Bairro" data-tipo="bairro" disabled>
               <label for="floatingInput" ></label>
-              <br>
             </div>
           </div>
           <div class="col-12 form-group">
             <input type="text" class="form-control" id="inputRua" placeholder="Rua" data-tipo="rua" disabled>
             <label for="floatingInput"></label>
-            <br>
           </div>
-        </main>
+        </section>
           <!-- Habilitado -->
         <dic class="bloco2">
-          <div class="form-floating mb-3">
+          <div class="form-floating col-2 mb-3">
             <input type="text" class="form-control" id="inputNumero" placeholder="numero" data-tipo="numero" required>
             <label for="floatingInput">Número</label>
-            <br>
           </div>
-          <div class="form-floating mb-3">
+          <div class="form-floating col-10 mb-3">
             <input type="text" class="form-control" id="inputComplemento" placeholder="complemento" data-tipo="complemento"required>
             <label for="floatingInput">Complemento</label>
           </div>
         </div>
-    </center>
-    <section>
-      <div>
-        <button type="submit" class="button">Cadastrar</button>
-      </div>
+      </main>
+      <section class="button my-5 mx-5">
+        <button type="submit" class="button w-20">Cadastrar</button>
     </section>
-    <br>
-    <br>
     <footer class="footer-config text-center mt-auto">
       <div class="text-center p-1 text-color">
         Dev Zoom Kids © 2022
