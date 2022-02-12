@@ -53,7 +53,7 @@ const mensagensDeErro = {
 
         senha: {
                 valueMissing: 'O campo de senha não pode estar vazio.',
-                patternMismatch: 'A senha deve conter entre 6 a 30 caracteres, deve conter pelo menos um número e não deve conter simbolos.'
+                patternMismatch: 'A senha não atende os requisitos.'
         },
 
         confirmarSenha: {
