@@ -35,7 +35,7 @@ h1{
 
 }
 
-main{
+.main{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
