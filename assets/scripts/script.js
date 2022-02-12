@@ -73,11 +73,7 @@ const mensagensDeErro = {
 
         numero: {
                 valueMissing: 'O campo de numero não pode estar vazio.'
-        },
-
-        complemento: {
-                valueMissing: 'O campo de complemento não pode estar vazio.'
-        },
+        }
 
 
 };
