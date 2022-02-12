@@ -12,35 +12,18 @@
     color: rgba(243, 66, 19, 0.8)!important;
 }
 
-body{
+.body{
     background: #FFFFA3;
 }
 
 .cadastro{
     background-color: #FFFFA3;
-    padding: 100px;
-}
-
-h1{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.bloco{
-    padding: -10px;
+    padding: 5vw;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
-    align-items: stretch;
-
-}
-
-main{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: stretch;
+    align-items: center;
 }
 
 .bloco1{
@@ -58,8 +41,8 @@ main{
     align-items: stretch;
 }
 
-.button{
-    margin-left: 600px;
+.button .button{
+    margin-left: 45%;
     background-color: #F34213 !important;
     font-size: 80%;
     color: white;
