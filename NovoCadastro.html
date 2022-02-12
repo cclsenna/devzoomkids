@@ -15,6 +15,7 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous" defer>
     </script>
     <script src="./assets/scripts/app_validacao.js" type="module" defer></script>
+    
     <title>Dev Zoom Kids</title>
   </head>
 
@@ -52,31 +53,37 @@
           <input type="text" class="form-control" id="inputNameResponsavel" placeholder="Nome do responsável"
           data-tipo="nomeResponsavel" required>
           <label for="floatingInput">Nome Completo</label>
+          <span class="input-mensagem-erro"></span>
           <br>
         </div>
         <div class="form-floating mb-3">
           <input type="text" class="form-control" id="inputNameAluno" placeholder="Nome do aluno" data-tipo="nomeAluno" required>
           <label for="floatingInput">Aluno</label>
+          <span class="input-mensagem-erro"></span>
           <br>
         </div>
         <div class="bloco">
           <div class="form-floating mb-3">
             <input type="text" class="form-control" id="inputRg" placeholder="RG" data-tipo="rg" required>
             <label for="floatingInput">RG</label>
+            <span class="input-mensagem-erro"></span>
             </div>
           <div class="form-floating mb-3">
             <input type="email" class="form-control" id="inputEmail4" placeholder="name@example.com" data-tipo="email" required>
             <label for="floatingInput">Email</label>
+            <span class="input-mensagem-erro"></span>
             <br>
           </div>
           <div class="form-floating">
-            <input type="password" class="form-control" id="inputPassword4"
-            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" placeholder="Senha" data-tipo="senha" required>
+            <input type="password" class="form-control" id="inputPassword4" autocomplete="off"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,30}$" title="A senha deve conter entre 6 a 30 caracteres, deve conter pelo menos uma letra maiúscula, um número e não deve conter símbolos." placeholder="Senha" data-tipo="senha" required>
             <label for="floatingPassword">Senha</label>
+            <span class="input-mensagem-erro"></span>
           </div>
           <div class="form-floating">
-            <input type="password" class="form-control" id="inputPassword5" placeholder="Senha" data-tipo="confirmarSenha">
+            <input type="password" class="form-control" id="inputPassword5" placeholder="Senha" data-tipo="confirmarSenha" autocomplete="off">
             <label for="floatingPassword">Confirmar Senha</label>
+            <span class="input-mensagem-erro"></span>
             <br>
           </div>
         </div>
@@ -84,6 +91,7 @@
           <div class="form-floating mb-3">
             <input type="text" class="form-control" id="inputZip" placeholder="Cep" data-tipo="cep" required>
             <label for="floatingInput">Cep</label>
+            <span class="input-mensagem-erro"></span>
             <br>
             <br>
           </div>
@@ -116,10 +124,11 @@
           <div class="form-floating mb-3">
             <input type="text" class="form-control" id="inputNumero" placeholder="numero" data-tipo="numero" required>
             <label for="floatingInput">Número</label>
+            <span class="input-mensagem-erro"></span>
             <br>
           </div>
           <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="inputComplemento" placeholder="complemento" data-tipo="complemento"required>
+            <input type="text" class="form-control" id="inputComplemento" placeholder="complemento" data-tipo="complemento">
             <label for="floatingInput">Complemento</label>
           </div>
         </div>
@@ -136,7 +145,9 @@
         Dev Zoom Kids © 2022
       </div>
     </footer>
+    
   </body>
+
 
 </html>
 
