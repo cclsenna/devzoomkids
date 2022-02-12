@@ -78,6 +78,35 @@ body {
     border: 2px solid #F34213;
 }
 
+<<<<<<< Updated upstream
 
 
+=======
+#cont2{
+    height: 350px;
+    border: 2px solid #F34213;
+    max-width: 750px;
+}
+
+#emailSuccess{
+    display: none;
+    color: #F34213;
+    font-size: 16px;
+}
+
+
+.footer-config {
+    background-color: #FFFFFF;
+    border-top: 1px solid rgba(243, 66, 19);
+    box-shadow: 0px -6px 17px 1px rgba(255,214,120,0.74);
+}
+
+
+.main-title {
+    color: #F34213;
+    text-align: center;
+    margin-top: 10px ;
+  
+  };
+>>>>>>> Stashed changes
 
