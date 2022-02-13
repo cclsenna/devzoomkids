@@ -70,3 +70,15 @@
     box-shadow: 0px -6px 17px 1px rgba(255,214,120,0.74);
 }
 
+#inputBairro::placeholder,#inputCity::placeholder,#inputState::placeholder{
+    color: black;
+}
+
+
+
+
+
+
+
+
+
