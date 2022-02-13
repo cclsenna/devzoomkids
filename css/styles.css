@@ -1,15 +1,10 @@
 body {
     background-color: #FFFFA3!important;
 }
-h3{
-    font-size: 20px;
-}
 
-
-.input-limit{
+.input-limit {
     max-width: 400px;
 }
-
 
 .navbrand {
     height: 4.6rem;
@@ -20,7 +15,7 @@ h3{
     color: rgba(243, 66, 19, 0.8)!important;
 }
 
-.text-link {
+.text-link, .title-color {
     color: #F34213;
     text-decoration: none;
 }
@@ -81,12 +76,9 @@ h3{
     background-color:white;
     border-color: #F34213;
     color: black;
-
-
 }
 
-#cont{
-    
+#cont {    
     height: 350px;
     border: 2px solid #F34213;
     max-width: 750px;
@@ -107,12 +99,7 @@ h3{
 
 .main-title {
   text-align: center;
-  color: tomato;
+  color: #F34213;
   margin-top: 20px;
   font-size: 25px;
-
 }
-
-
-
-
