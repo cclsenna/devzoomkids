@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<<<<<<< HEAD
-  <body class="d-flex flex-column min-vh-100 max-vw-100">
-=======
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,8 +19,7 @@
   <title>Dev Zoom Kids</title>
 </head>
 
-<body class="d-flex flex-column min-vh-100">
->>>>>>> 2a2878b41d7b2dbbaaaa33032fe979ffc8d8e3f0
+<body class="d-flex flex-column min-vh-100 max-vw-100">
   <!-- Menu -->
   <header class="novo-bg">
     <nav class="navbar navbar-light navbar-expand-lg bg-transparent justify-content-between ms-2 me-2">
@@ -49,144 +45,122 @@
   </header>
   <!-- FIM DO HEADER -->
   <!-- Formulário -->
-<<<<<<< HEAD
     <main class="cadastro w-100 gap-5">
       <h1 class="display-5 text-link ">Cadastre-se aqui!</h1>
       <form class="form-floating">
-        <div class="form-floating col-9 mb-3">
+      <div class="container"> 
+        <div class="form-floating col mb-3">
           <input type="text" class="form-control" id="inputNameResponsavel" placeholder="Nome do responsável"
           data-tipo="nomeResponsavel" required>
           <label for="floatingInput">Nome Completo</label>
+          <span class="input-mensagem-erro"></span>
         </div>
-        <div class="form-floating col-9 mb-3">
+      </div>
+
+      <div class="container">
+        <div class="form-floating col mb-3">
           <input type="text" class="form-control" id="inputNameAluno" placeholder="Nome do aluno" data-tipo="nomeAluno" required>
           <label for="floatingInput">Aluno</label>
+          <span class="input-mensagem-erro"></span>
         </div>
+
+      </div>
+        
+        
         <!--bloco rg-->
-        <div class="bloco container w-100 mx-4">
-          <div class="row">
-          <div class="form-floating col-5 mb-3">
-            <input type="text" class="form-control" id="inputRg" placeholder="RG" data-tipo="rg" required>
-            <label for="floatingInput">RG</label>
-            </div>
-          <div class="form-floating col-5 mb-3">
-            <input type="email" class="form-control" id="inputEmail4" placeholder="name@example.com" data-tipo="email" required>
-            <label for="floatingInput">E-mail</label>
-          </div>
-          <div class="form-floating col-5 mb-3">
-            <input type="password" class="form-control" id="inputPassword4"
-            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" placeholder="Senha" data-tipo="senha" required>
-            <label for="floatingPassword">Senha</label>
-          </div>
-            <div class="form-floating col-5">
-              <input type="password" class="form-control" id="inputPassword5" placeholder="Senha" data-tipo="confirmarSenha">
-              <label for="floatingPassword">Confirmar Senha</label>
-            </div>
+        <div class="container">
+          <div class="row w-100">
+            <!-- <div class="d-flex flex-row justify-content-between flex-wrap mb-3"> -->
+             <div class="form-floating col-12 col-lg-3 mb-3">
+               <input type="text" class="form-control" id="inputRg" placeholder="RG" data-tipo="rg" required>
+               <label for="floatingInput">RG</label>
+               <span class="input-mensagem-erro"></span>
+               </div>
+   
+             <div class="form-floating col-12 col-lg-3 mb-3">
+               <input type="email" class="form-control" id="inputEmail4" placeholder="name@example.com" data-tipo="email" required>
+               <label for="floatingInput">E-mail</label>
+               <span class="input-mensagem-erro"></span>
+             </div>
+   
+             <div class="form-floating col-12 col-lg-3 mb-3">
+               <input type="password" class="form-control" id="inputPassword4"
+               pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,30}$" placeholder="Senha" data-tipo="senha" aria-describedby="passwordHelpBlock"  autocomplete="off" title="A senha deve conter entre 6 a 30 caracteres, deve conter pelo menos uma letra maiúscula, um número e não deve conter símbolos." required>
+               <label for="floatingPassword">Senha</label>
+               <div id="passwordHelpBlock" class="form-text">
+                 A senha deve conter entre 6 a 30 caracteres, deve conter pelo menos uma letra maiúscula, um número e não
+                 deve conter símbolos.
+               </div>
+               <span class="input-mensagem-erro"></span>
+             </div>
+   
+               <div class="form-floating col-12 col-lg-3 mb-3">
+                 <input type="password" class="form-control" id="inputPassword5" placeholder="Senha" data-tipo="confirmarSenha"  autocomplete="off">
+                 <label for="floatingPassword">Confirmar Senha</label>
+                 <span class="input-mensagem-erro"></span>
+   
+               </div>
+          <!-- </div>-->
+           </div>
+
         </div>
-        </div>
+        
+
+        
                 <!--bloco cep-->
-        <section class="bloco1 container">
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="inputZip" placeholder="Cep" data-tipo="cep" required>
-            <label for="floatingInput">Cep</label>
+        <section class="container">
+          <div class="row">
+
+          <div class="form-floating col">
+            <input type="text" class="form-control" id="inputZip" placeholder="CEP" data-tipo="cep" required>
+            <label for="floatingInput">CEP</label>
+            <span class="input-mensagem-erro"></span>
+
           </div>
           <!-- Desabilitado -->
-          <div class="bloco1 mx-5">
-            <div class="col-7 form-group">
+            <div class="col form-group form-floating mb-3">
               <input type="text" class="form-control" id="inputState" placeholder= "Estado" data-tipo="estado" disabled>
               <label for="floatingInput"></label>
+              <span class="input-mensagem-erro"></span>
+
             </div>
-            <div class="col-7 form-group">
-              <input type="text" class="form-control" id="inputCity" placeholder="cidade" data-tipo="cidade" disabled>
+            <div class="col form-group form-floating mb-3">
+              <input type="text" class="form-control" id="inputCity" placeholder="Cidade" data-tipo="cidade" disabled>
               <label for="floatingInput"></label>
+              <span class="input-mensagem-erro"></span>
+
             </div>
-            <div class="col-7 form-group">
+            <div class="col form-group form-floating mb-3">
               <input type="text" class="form-control" id="inputBairro" placeholder="Bairro" data-tipo="bairro" disabled>
               <label for="floatingInput" ></label>
+              <span class="input-mensagem-erro"></span>
+
             </div>
-          </div>
-=======
-  <center class="cadastro">
-    <h1>CADASTRE-SE AQUI!</h1>
-    <br>
-    <br>
-    <form class="form-floating">
-      <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="inputNameResponsavel" placeholder="Nome do responsável"
-          data-tipo="nomeResponsavel" required>
-        <label for="floatingInput">Nome Completo</label>
-        <span class="input-mensagem-erro"></span>
-        <br>
-      </div>
-      <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="inputNameAluno" placeholder="Nome do aluno" data-tipo="nomeAluno"
-          required>
-        <label for="floatingInput">Aluno</label>
-        <span class="input-mensagem-erro"></span>
-        <br>
-      </div>
-      <div class="bloco">
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="inputRg" placeholder="RG" data-tipo="rg" required>
-          <label for="floatingInput">RG</label>
-          <span class="input-mensagem-erro"></span>
-        </div>
-        <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="inputEmail4" placeholder="name@example.com" data-tipo="email"
-            required>
-          <label for="floatingInput">Email</label>
-          <span class="input-mensagem-erro"></span>
-          <br>
-        </div>
-        <div class="form-floating">
-          <input type="password" class="form-control" id="inputPassword4" autocomplete="off"
-            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,30}$"
-            title="A senha deve conter entre 6 a 30 caracteres, deve conter pelo menos uma letra maiúscula, um número e não deve conter símbolos."
-            placeholder="Senha" data-tipo="senha" aria-describedby="passwordHelpBlock" required>
-          <label for="floatingPassword">Senha</label>
-          <div id="passwordHelpBlock" class="form-text">
-            A senha deve conter entre 6 a 30 caracteres, deve conter pelo menos uma letra maiúscula, um número e não
-            deve conter símbolos.
-          </div>
-          <span class="input-mensagem-erro"></span>
-        </div>
-        <div class="form-floating">
-          <input type="password" class="form-control" id="inputPassword5" placeholder="Senha" data-tipo="confirmarSenha"
-            autocomplete="off">
-          <label for="floatingPassword">Confirmar Senha</label>
-          <span class="input-mensagem-erro"></span>
-          <br>
-        </div>
-      </div>
-      <main>
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="inputZip" placeholder="Cep" data-tipo="cep" required>
-          <label for="floatingInput">Cep</label>
-          <span class="input-mensagem-erro"></span>
-          <br>
-          <br>
-        </div>
-        <!-- Desabilitado -->
-        <div class="bloco1">
->>>>>>> 2a2878b41d7b2dbbaaaa33032fe979ffc8d8e3f0
-          <div class="col-12 form-group">
-            <input type="text" class="form-control" id="inputState" placeholder="Estado" data-tipo="estado" disabled>
-            <label for="floatingInput"></label>
-          </div>
-<<<<<<< HEAD
+          </div>  
         </section>
           <!-- Habilitado -->
-        <dic class="bloco2">
-          <div class="form-floating col-2 mb-3">
-            <input type="text" class="form-control" id="inputNumero" placeholder="numero" data-tipo="numero" required>
-            <label for="floatingInput">Número</label>
+
+        <div class="container">
+          <div class="row mb-3">
+            <div class="form-floating col-2">
+              <input type="text" class="form-control" id="inputNumero" placeholder="Número" data-tipo="numero" required>
+              <label for="floatingInput">Número</label>
+              <span class="input-mensagem-erro"></span>
+  
+            </div>
+            <div class="form-floating col">
+              <input type="text" class="form-control" id="inputComplemento" placeholder="Complemento" data-tipo="complemento">
+              <label for="floatingInput">Complemento</label>
+              <span class="input-mensagem-erro"></span>
+  
+            </div>
+
           </div>
-          <div class="form-floating col-10 mb-3">
-            <input type="text" class="form-control" id="inputComplemento" placeholder="complemento" data-tipo="complemento"required>
-            <label for="floatingInput">Complemento</label>
-          </div>
+          
         </div>
+
       </main>
+      
       <section class="button my-5 mx-5">
         <button type="submit" class="button w-20">Cadastrar</button>
     </section>
@@ -196,52 +170,6 @@
       </div>
     </footer>
   </body>
-=======
-          <div class="col-12 form-group">
-            <input type="text" class="form-control" id="inputCity" placeholder="cidade" data-tipo="cidade" disabled>
-            <label for="floatingInput"></label>
-            <br>
-          </div>
-          <div class="col-12 form-group">
-            <input type="text" class="form-control" id="inputBairro" placeholder="Bairro" data-tipo="bairro" disabled>
-            <label for="floatingInput"></label>
-            <br>
-          </div>
-        </div>
-        <div class="col-12 form-group">
-          <input type="text" class="form-control" id="inputRua" placeholder="Rua" data-tipo="rua" disabled>
-          <label for="floatingInput"></label>
-          <br>
-        </div>
-      </main>
-      <!-- Habilitado -->
-      <dic class="bloco2">
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="inputNumero" placeholder="numero" data-tipo="numero" required>
-          <label for="floatingInput">Número</label>
-          <span class="input-mensagem-erro"></span>
-          <br>
-        </div>
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="inputComplemento" placeholder="complemento"
-            data-tipo="complemento">
-          <label for="floatingInput">Complemento</label>
-        </div>
-        </div>
-  </center>
-  <section>
-    <div>
-      <button type="submit" class="button">Cadastrar</button>
-    </div>
-  </section>
-  <br>
-  <br>
-  <footer class="footer-config text-center mt-auto">
-    <div class="text-center p-1 text-color">
-      Dev Zoom Kids © 2022
-    </div>
-  </footer>
->>>>>>> 2a2878b41d7b2dbbaaaa33032fe979ffc8d8e3f0
 
 </body>
 
