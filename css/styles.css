@@ -63,6 +63,11 @@ body {
     height: 400px;
 }
 
+.contato-fab {
+    color: #F34213;
+    font-size: 1.8rem;
+  }
+
 .container-senha {
     text-align: center;
 }
