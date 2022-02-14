@@ -50,6 +50,10 @@ main{
   color: #231C07;
   font-size: 1.8rem;
 }
+
+.card ul li {
+  font-weight: 500;
+}
   
 .pricing .text-muted {
   opacity: 0.7;

@@ -44,7 +44,7 @@
   <!-- FIM DO HEADER -->
   <!-- Formulário -->
     <main class="cadastro w-75 gap-5 mx-auto mt-5 px-3">
-      <h1 class="display-5 text-link ">Cadastre-se aqui!</h1>
+      <h1 class="display-5 title-color">Cadastre-se aqui!</h1>
       <form class="form-floating">
       <div class="container"> 
         <div class="form-floating col mb-3">
@@ -94,24 +94,24 @@
         </div>        
                 <!--bloco cep-->
         <section class="container">
-          <div class="row mb-3">
-          <div class="form-floating col">
+          <div class="row">
+          <div class="form-floating col-12 col-lg-3 mb-3">
             <input type="text" class="form-control" id="inputZip" placeholder="CEP" data-tipo="cep" required>
             <label for="floatingInput">CEP</label>
             <span class="input-mensagem-erro"></span>
           </div>
           <!-- Desabilitado -->
-            <div class="col form-group form-floating">
+            <div class="col-12 col-lg-3 form-group form-floating mb-3">
               <input type="text" class="form-control" id="inputState" placeholder= "Estado" data-tipo="estado" disabled>
               <label for="floatingInput"></label>
               <span class="input-mensagem-erro"></span>
             </div>
-            <div class="col form-group form-floating">
+            <div class="col-12 col-lg-3 form-group form-floating mb-3">
               <input type="text" class="form-control" id="inputCity" placeholder="Cidade" data-tipo="cidade" disabled>
               <label for="floatingInput"></label>
               <span class="input-mensagem-erro"></span>
             </div>
-            <div class="col form-group form-floating">
+            <div class="col-12 col-lg-3 form-group form-floating mb-3">
               <input type="text" class="form-control" id="inputBairro" placeholder="Bairro" data-tipo="bairro" disabled>
               <label for="floatingInput" ></label>
               <span class="input-mensagem-erro"></span>
@@ -121,12 +121,12 @@
           <!-- Habilitado -->
         <div class="container">
           <div class="row mb-3">
-            <div class="form-floating col-2">
+            <div class="form-floating col-12 col-lg-2 mb-3">
               <input type="text" class="form-control" id="inputNumero" placeholder="Número" data-tipo="numero" required>
               <label for="floatingInput">Número</label>
               <span class="input-mensagem-erro"></span>  
             </div>
-            <div class="form-floating col">
+            <div class="form-floating col-12 col-lg-10">
               <input type="text" class="form-control" id="inputComplemento" placeholder="Complemento" data-tipo="complemento">
               <label for="floatingInput">Complemento</label>
               <span class="input-mensagem-erro"></span>  
