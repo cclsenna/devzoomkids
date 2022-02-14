@@ -61,5 +61,9 @@ Algumas páginas serão criadas também para simular algumas funções, elas nã
 
 #### Layout Mobile
 
+<div align="center">
+
 ![image](https://github.com/cclsenna/projeto-final-2/blob/minha-nova-branch/img/mobile_home.png?raw=true)
 ![image](https://github.com/cclsenna/projeto-final-2/blob/minha-nova-branch/img/mobile_servicos.png?raw=true)
+
+</div>
