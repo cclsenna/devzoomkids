@@ -37,8 +37,8 @@ Algumas páginas serão criadas também para simular algumas funções, elas nã
 * Deve conter formulário com:
     * Usuário (e-mail); ✅
     * Senha; ✅
-    * Deve validar o campo de entrada como e-mail; 
-* Deve conter link para página de recuperação de senha (esqueci minha senha).
+    * Deve validar o campo de entrada como e-mail; ✅
+* Deve conter link para página de recuperação de senha (esqueci minha senha). ✅
 
 #### **Página de recuperação de senha**
 
