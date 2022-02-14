@@ -9,10 +9,7 @@ export function valida(input) {
         };
 
         //Verifica o atributo do valor do input, no campo de validity, se o attribute .valid é true ou false. 
-
-
         if (input.validity.valid) {
-
                 //Caso o retorno seja true, remove a mensagem de erro.
 
                 input.parentElement.classList.remove('form-group-erro');
@@ -82,7 +79,8 @@ const mensagensDeErro = {
 
 const validadores = {
         confirmarSenha: input => validadorDeSenha(input),
-        rg: input => validadorDeRg(input)
+        rg: input => validadorDeRg(input),
+        cep: input => buscaCep(input)
 
 };
 
@@ -98,34 +96,47 @@ function mostraMensagemDeErro(tipoDeInput, input) {
         return mensagem;
 }
 
-//Criando evento para auto preenchimento quando fora de foco.
-$('#inputZip').on('focusout', function (event) {
-        event.preventDefault();
-        buscaCep();
-});
 
 //Declarando a função buscaCep, que faz a solicitação à API.
-function buscaCep() {
-        let cep = document.querySelector('#inputZip').value.replace(/\D/g, '');
-        $.ajax({
-                url: `https://viacep.com.br/ws/${cep}/json/`,
-                method: 'GET',
+function buscaCep(input) {
+        input.setCustomValidity('');
+        $('#inputState').val('');
+        $('#inputCity').val('');
+        $('#inputBairro').val('');
+        $('#inputRua').val('');
+        
+        let cep = input.value.replace(/\D/g, '');
+        try {
+                if (cep == '') throw 'vazio';
+                if (isNaN(cep)) throw 'não é um número'
+                if (cep.length > 9) throw 'muito longo'
+                if (cep.length < 8) throw 'muito curto'
+                $.ajax({
+                        url: `https://viacep.com.br/ws/${cep}/json/`,
+                        method: 'GET',
 
-                //Caso tenha sucesso ele busca o (parametro).
-                success: function (parametro) {
+                        //Caso tenha sucesso ele busca o (parametro).
+                        success: function (parametro) {
+                                //Api dos correios retorna "sucesso com erro" desde que siga o padrão de quantidade de digitos, 
+                                //colocamos uma validação para esse caso específico, mas por causa do retorno assincrono da chamada do api a validação não funciona.
+                                if(parametro.erro){
+                                        let mensagem = 'Cep Inválido';
+                                        input.setCustomValidity(mensagem);
+                                        return;
+                                }
+                                //Checa a validação do input e remove o erro caso de input invalido.
+                                
+                                //Realiza a manipulação de DOM, preenchendo os campos.
+                                $('#inputState').val(parametro.uf);
+                                $('#inputCity').val(parametro.localidade);
+                                $('#inputBairro').val(parametro.bairro);
+                                $('#inputRua').val(parametro.logradouro);
+                        }
+                });
 
-                        //Realiza a manipulação de DOM, preenchendo os campos.
-                        $('#inputState').val(parametro.uf);
-                        $('#inputCity').val(parametro.localidade);
-                        $('#inputBairro').val(parametro.bairro);
-                        $('#inputRua').val(parametro.logradouro);
-
-                },
-                //Tratamento de ERRO.
-                error: function () {
-
-                }
-        })
+        } catch (errorCatch) {
+                input.setCustomValidity(errorCatch);
+        };
 };
 
 //Função para validação de senha, comparando os valores dos campos senha e conformação de senha. Se o valor for diferente retorna mensagem específica (customErro).
@@ -137,7 +148,7 @@ function validadorDeSenha(input) {
                 mensagem = 'As senhas não correspondem.';
         }
         input.setCustomValidity(mensagem);
-}
+};
 
 //Função para validação do RG, trata o tamanho do rg (considerando apenas números), caso o tamanho dele for menor que 8 caracteres (considerando os 0 a esquerda) e maior que 9 caracteres retorna mensagem específica (customErro).
 function validadorDeRg(input) {
