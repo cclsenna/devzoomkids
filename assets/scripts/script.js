@@ -9,10 +9,7 @@ export function valida(input) {
         };
 
         //Verifica o atributo do valor do input, no campo de validity, se o attribute .valid é true ou false. 
-
-
         if (input.validity.valid) {
-
                 //Caso o retorno seja true, remove a mensagem de erro.
 
                 input.parentElement.classList.remove('form-group-erro');
@@ -43,7 +40,7 @@ const mensagensDeErro = {
         },
 
         nomeAluno: {
-                valueMissing: 'O campo nome do aluno não pode estar vazio.'
+                valueMissing: 'O campo nome não pode estar vazio.'
         },
 
         email: {
@@ -53,7 +50,7 @@ const mensagensDeErro = {
 
         senha: {
                 valueMissing: 'O campo de senha não pode estar vazio.',
-                patternMismatch: 'A senha deve conter entre 6 a 30 caracteres, deve conter pelo menos um número e não deve conter simbolos.'
+                patternMismatch: 'A senha não atende os requisitos.'
         },
 
         confirmarSenha: {
@@ -73,11 +70,7 @@ const mensagensDeErro = {
 
         numero: {
                 valueMissing: 'O campo de numero não pode estar vazio.'
-        },
-
-        complemento: {
-                valueMissing: 'O campo de complemento não pode estar vazio.'
-        },
+        }
 
 
 };
@@ -103,28 +96,47 @@ function mostraMensagemDeErro(tipoDeInput, input) {
         return mensagem;
 }
 
+
 //Declarando a função buscaCep, que faz a solicitação à API.
 function buscaCep(input) {
-        let cep = input.value.replace(/\D/g, '');    
-        $.ajax({
-                url: `https://viacep.com.br/ws/${cep}/json/`,
-                method: 'GET',
+        input.setCustomValidity('');
+        $('#inputState').val('');
+        $('#inputCity').val('');
+        $('#inputBairro').val('');
+        $('#inputRua').val('');
+        
+        let cep = input.value.replace(/\D/g, '');
+        try {
+                if (cep == '') throw 'vazio';
+                if (isNaN(cep)) throw 'não é um número'
+                if (cep.length > 9) throw 'muito longo'
+                if (cep.length < 8) throw 'muito curto'
+                $.ajax({
+                        url: `https://viacep.com.br/ws/${cep}/json/`,
+                        method: 'GET',
 
-                //Caso tenha sucesso ele busca o (parametro).
-                success: (parametro) => {
+                        //Caso tenha sucesso ele busca o (parametro).
+                        success: function (parametro) {
+                                //Api dos correios retorna "sucesso com erro" desde que siga o padrão de quantidade de digitos, 
+                                //colocamos uma validação para esse caso específico, mas por causa do retorno assincrono da chamada do api a validação não funciona.
+                                if(parametro.erro){
+                                        let mensagem = 'Cep Inválido';
+                                        input.setCustomValidity(mensagem);
+                                        return;
+                                }
+                                //Checa a validação do input e remove o erro caso de input invalido.
+                                
+                                //Realiza a manipulação de DOM, preenchendo os campos.
+                                $('#inputState').val(parametro.uf);
+                                $('#inputCity').val(parametro.localidade);
+                                $('#inputBairro').val(parametro.bairro);
+                                $('#inputRua').val(parametro.logradouro);
+                        }
+                });
 
-                        //Realiza a manipulação de DOM, preenchendo os campos.
-                        $('#inputState').val(parametro.uf);
-                        $('#inputCity').val(parametro.localidade);
-                        $('#inputBairro').val(parametro.bairro);
-                        $('#inputRua').val(parametro.logradouro);
-
-                },
-                //Tratamento de ERRO.
-                error: () => {
-
-                }
-        });
+        } catch (errorCatch) {
+                input.setCustomValidity(errorCatch);
+        };
 };
 
 //Função para validação de senha, comparando os valores dos campos senha e conformação de senha. Se o valor for diferente retorna mensagem específica (customErro).
@@ -134,7 +146,7 @@ function validadorDeSenha(input) {
         let mensagem = '';
         if (senha != confirmaSenha) {
                 mensagem = 'As senhas não correspondem.';
-        };
+        }
         input.setCustomValidity(mensagem);
 };
 
@@ -142,10 +154,9 @@ function validadorDeSenha(input) {
 function validadorDeRg(input) {
         const rg = input.value.replace(/\D/g, '');
         let mensagem = '';
-      
-        if (rg.length > 0 && rg.length < 8 || rg.length > 9) {
-                mensagem = 'O RG digitado é inválido';
-                input.setCustomValidity(mensagem);
+        if (rg.length < 8 || rg.length > 9) {
+                mensagem = 'O RG digitado é inválido'
+
         };
-        
+        input.setCustomValidity(mensagem);
 };
