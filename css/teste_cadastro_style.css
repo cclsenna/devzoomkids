@@ -1,3 +1,4 @@
+
 *{
     margin:0;
     padding: 0;
@@ -18,7 +19,7 @@
 
 .cadastro{
     background-color: #FFFFA3;
-    padding: 5vw;
+    padding: 2% 25% 5% 25%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -26,22 +27,44 @@
     align-items: center;
 }
 
-.bloco .bloco1 .bloco2 .bloco3{
+.bloco1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.bloco2{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
+    justify-content: space-between;
 }
 
 .bloco3{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
+    justify-content: space-between;
 }
 
+.bloco4{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 12%;
+}
+
+.bloco5{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: -23%;
+    margin-left: 65%;
+}
+
+.bolco6{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 .button .button{
     margin-left: 45%;
@@ -71,4 +94,3 @@
     border-top: 1px solid rgba(243, 66, 19);
     box-shadow: 0px -6px 17px 1px rgba(255,214,120,0.74);
 }
-

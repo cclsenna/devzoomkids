@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="./css/teste_cadastro_style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="icon" type="image/svg" href="img/favicon.svg">
+  <script src="./assets/scripts/jquery-3.6.0.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous" defer>
+  </script>
+  <script src="./assets/scripts/app_validacao.js" type="module" defer></script>
+
+  <title>Dev Zoom Kids</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100 max-vw-100">
+  <!-- Menu -->
+  <header class="novo-bg">
+    <nav class="navbar navbar-light navbar-expand-lg bg-transparent justify-content-between ms-2 me-2">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="https://cclsenna.github.io/projeto-final-2/">
+          <img src="img/DEV ZOOM KIDS.svg" class="navbrand" alt="Logo Dev Zoom Kids">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+          <ul class="navbar-nav">
+            <li><a class="nav-link active text-color" aria-current="page" href="./index.html">Início</a></li>
+            <li><a class="nav-link text-color" href="./Servicos.html">Sobre</a></li>
+            <li><a class="nav-link text-color" href="#">Contato</a></li>
+            <li><a class="nav-link text-color" href="./NovoCadastro.html">Cadastro</a></li>
+            <li><a class="nav-link text-color" href="./page_log.html">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- FIM DO HEADER -->
+  <main class="cadastro">
+        <h1 class="display-5 text-link ">Cadastre-se aqui!</h1>
+        <section class="container">
+          <div class="bloco1">
+            <form class="form-floating">
+              <div class="form form-floating input-group mb-3">
+                <input type="text" class="form-control" id="inputNameResponsavel" placeholder="Nome do responsável"
+                data-tipo="nomeResponsavel" required>
+                <label for="floatingInput">Nome do Responsável</label>
+              </div>
+              <div class="form form-floating input-group mb-3">
+                <input type="text" class="form-control" id="inputNameAluno" placeholder="Nome do aluno" data-tipo="nomeAluno" required>
+                <label for="floatingInput">Nome do Aluno</label>
+              </div>
+            </div>
+            <section class="form form-floating input group mb-3">
+              <div class="bloco2">
+              <div class="form form-floating col-5 mb-3">
+                <input type="text" class="form-control" id="inputRg" placeholder="RG" data-tipo="rg" required>
+                <label for="floatingInput">RG</label>
+              </div>
+              <div class="form form-floating col-6 mb-3">
+                <input type="email" class="form-control" id="inputEmail4" placeholder="name@example.com" data-tipo="email" required>
+                <label for="floatingInput">E-mail</label>
+              </div>
+            </div>
+              <div class="bloco3">
+              <div class="form form-floating col-5 mb-3">
+                <input type="password" class="form-control" id="inputPassword4"
+                 pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" placeholder="Senha" data-tipo="senha" required>
+                <label for="floatingPassword">Senha</label>
+              </div>
+              <div class="form form-floating col-5 mb-3">
+                <input type="password" class="form-control" id="inputPassword5" placeholder="Senha" data-tipo="confirmarSenha">
+                <label for="floatingPassword">Confirme a Senha</label>
+              </div>
+            </div>
+            </section>
+            <section class="form form-floating input group mb-3">
+              <div class="bloco4">
+              <div class="form form-floating col-4 mb-3">
+                <input type="text" class="form-control" id="inputZip" placeholder="Cep" data-tipo="cep" required>
+                <label for="floatingInput">CEP</label>
+              </div>
+            </div>
+            <div class="bloco5">
+              <div class="form form-floating col-12 mb-3">
+                <input type="text" class="form-control" id="inputState" placeholder= "Estado" data-tipo="estado" disabled>
+                <label for="floatingInput">Estado</label>
+              </div>
+              <div class="form form-floating col-12 mb-3">
+                <input type="text" class="form-control" id="inputCity" placeholder="cidade" data-tipo="cidade" disabled>
+                <label for="floatingInput">Cidade</label>
+              </div>
+              <div class="form form-floating col-12 mb-3">
+                <input type="text" class="form-control" id="inputBairro" placeholder="Bairro" data-tipo="bairro" disabled>
+                <label for="floatingInput" >Bairro</label>
+              </div>
+            </div>
+            </section>
+              <div class="bloco6 form form-floating mb-3 row">
+              <div class="form form-floating col-10 mb-3">
+                <input type="text" class="form-control" id="inputRua" placeholder="Rua" data-tipo="rua" disabled>
+                <label for="floatingInput">Rua</label>
+              </div>
+              <div class="form form-floating col-2 mb-3">
+                <input type="text" class="form-control" id="inputNumero" placeholder="numero" data-tipo="numero" required>
+                <label for="floatingInput">Número</label>
+              </div>
+            </div>
+              <div class="form form-floating mb-3">
+                <input type="text" class="form-control" id="inputComplemento" placeholder="complemento" data-tipo="complemento"required>
+                <label for="floatingInput">Complemento</label>
+              </div>
+            </form>
+        </section>
+        <section class="button">
+            <button type="submit" class="button w-20">Cadastrar</button>
+        </section>
+  </main>
+  <footer class="footer-config text-center mt-auto">
+    <div class="text-center p-1 text-color">
+      Dev Zoom Kids © 2022
+    </div>
+  </footer>
+</body>
+</html>
