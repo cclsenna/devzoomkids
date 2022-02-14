@@ -1,0 +1,92 @@
+*{
+    margin:0;
+    padding: 0;
+}
+  
+.navbrand {
+    height: 6rem;
+}
+  
+.text-color {
+    font-weight: 500;
+    color: rgba(243, 66, 19, 0.8)!important;
+}
+
+.body{
+    background: #FFFFA3;
+}
+
+.cadastro{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.bloco1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.bloco2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+
+.input-mensagem-erro{
+    color: red;
+    display: none;
+}
+
+.form-group-erro .input-mensagem-erro{
+    display: block;
+}
+
+.footer-config {
+    background-color: #FFFFFF;
+    border-top: 1px solid rgba(243, 66, 19);
+    box-shadow: 0px -6px 17px 1px rgba(255,214,120,0.74);
+}
+
+#inputBairro::placeholder,#inputCity::placeholder,#inputState::placeholder{
+    color: black;
+}
+
+
+
+
+.duvida-senha{
+    position:sticky;
+    bottom: 60%;
+    left:61%;
+    cursor:pointer;
+    font-size: 12px;
+}
+
+
+
+
+#label-password{
+    width: 100% ;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

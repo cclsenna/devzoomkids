@@ -72,16 +72,28 @@ body {
     text-align: center;
 }
 
-.botao{
-    background-color:#F34213;
-    border-color:#000;
-}
 
 .botao:hover{
     background-color:white;
     border-color: #F34213;
-    color: black;
+    opacity: 0.7;
 }
+
+.botao {
+    background-color: #F34213 !important;
+    font-size: 80%;
+    border-radius: 5rem;
+    border-color: #F34213 !important;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    padding: 1rem;
+    opacity: 1;
+    transition: all 0.2s;
+    width: 150px;   
+}
+
+
+
 
 #cont {    
     height: 350px;
@@ -94,6 +106,16 @@ body {
     border: 2px solid #F34213;
     max-width: 750px;
 }
+
+.input-mensagem-erro{
+    color: red;
+    display: none;
+}
+
+.form-group-erro .input-mensagem-erro{
+    display: block;
+}
+
 
 #emailSuccess{
     display: none;
@@ -108,3 +130,6 @@ body {
   margin-top: 20px;
   font-size: 25px;
 }
+
+
+

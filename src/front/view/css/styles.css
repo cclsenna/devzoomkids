@@ -1,0 +1,135 @@
+body {
+    background-color: #FFFFA3!important;
+}
+
+.input-limit {
+    max-width: 400px;
+}
+
+.navbrand {
+    height: 4.6rem;
+}
+
+.text-color {
+    font-weight: 500;
+    color: rgba(243, 66, 19, 0.8)!important;
+}
+
+.text-link, .title-color {
+    color: #F34213;
+    text-decoration: none;
+}
+
+.text-color-slide, .text-link:hover {
+    color: #231C07;
+}
+
+.text-homepage > h1 {
+    font-weight: 400;
+    color: #F34213;
+}
+
+.circulo {
+    height: 23rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-image: url("../img/pexels-keira-burton-6624387.jpg");
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    border: 2px solid #F34213;
+}
+
+.novo-bg {
+    background-color: #FFFFFF;
+    border-bottom: 3px solid rgba(243, 66, 19);
+    box-shadow: 0px 6px 17px 1px rgba(255,214,120,0.74);
+}
+
+.footer-config {
+    background-color: #FFFFFF;
+    border-top: 1px solid rgba(243, 66, 19);
+    box-shadow: 0px -6px 17px 1px rgba(255,214,120,0.74);
+}
+
+.carousel {
+    overflow: hidden;
+    height: 20rem;
+}
+
+.imagem-carrossel {
+    object-fit: cover;
+    object-position: 0 60%;
+    height: 400px;
+}
+
+.contato-fab {
+    color: #F34213;
+    font-size: 1.8rem;
+  }
+
+.container-senha {
+    text-align: center;
+}
+
+
+.botao:hover{
+    background-color:white;
+    border-color: #F34213;
+    opacity: 0.7;
+}
+
+.botao {
+    background-color: #F34213 !important;
+    font-size: 80%;
+    border-radius: 5rem;
+    border-color: #F34213 !important;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    padding: 1rem;
+    opacity: 1;
+    transition: all 0.2s;
+    width: 150px;   
+}
+
+
+
+
+#cont {    
+    height: 350px;
+    border: 2px solid #F34213;
+    max-width: 750px;
+}
+
+#cont2{
+    height: 350px;
+    border: 2px solid #F34213;
+    max-width: 750px;
+}
+
+.input-mensagem-erro{
+    color: red;
+    display: none;
+}
+
+.form-group-erro .input-mensagem-erro{
+    display: block;
+}
+
+
+#emailSuccess{
+    display: none;
+    color: #F34213;
+    font-size: 16px;
+}
+
+
+.main-title {
+  text-align: center;
+  color: #F34213;
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+
+

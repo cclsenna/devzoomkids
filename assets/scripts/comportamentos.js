@@ -1,6 +1,9 @@
 
 //Adicionando evneto para capturar qualquer click  na tela
-
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
 
 document.addEventListener('click',(e)=>{
     //verifica se o botão clickado foi o do tela de email
@@ -22,9 +25,38 @@ document.addEventListener('click',(e)=>{
         }
       
     }
+
     else if(e.target.id==='botao-modal-redefinir'){
         window.location.href='./page_log.html';
     }
+
+
+    else if(e.target.id==='botao-cadastro'){
+        e.preventDefault();
+        let botao2=e.target;
+        if(formulario.checkValidity()){
+            botao2.setAttribute('data-bs-toggle','modal');
+            botao2.setAttribute('data-bs-target','#exampleModal');
+            botao2.click();
+            return;
+        }
+        else{
+            clicaInput();
+            return;
+        }
+        
+   
+
+
+    }
+
+    else if(e.target.id==='botao-modal-cadastro'){
+        window.location.href='./Servicos.html';
+        return;
+
+    }
+
+    
 
     
 
@@ -33,6 +65,7 @@ document.addEventListener('click',(e)=>{
 
 
 function alternaTela(){
+    //declarando variaveis que serão utilizadas
     let contEmail=document.getElementById('cont');
     let contCode=document.getElementById('cont2');
     let emailCLiente=document.getElementById('inputEmail4').value;
@@ -51,7 +84,7 @@ function alternaTela(){
 
 }
 
-//funcao que omite alguns caracteres do email do cliente
+//funcao que omite alguns caracteres do email do cliente para exibição na tela
 function criptoEmail(value){
     let pos=value.indexOf('@');
     let newValue=value.split('');
@@ -60,6 +93,22 @@ function criptoEmail(value){
         newValue[i]='*'
     }
     return newValue.join('');
+
+
+}
+
+
+//força o erro apra que o formulário exiba os campos invalidos
+function clicaInput(){
+
+    const fields=document.querySelectorAll('input');    
+    fields.forEach(input=>{
+        input.focus();
+        input.blur();
+        
+
+    });
+    
 
 
 }
