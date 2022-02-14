@@ -37,8 +37,8 @@ Algumas páginas serão criadas também para simular algumas funções, elas nã
 * Deve conter formulário com:
     * Usuário (e-mail); ✅
     * Senha; ✅
-    * Deve validar o campo de entrada como e-mail; 
-* Deve conter link para página de recuperação de senha (esqueci minha senha).
+    * Deve validar o campo de entrada como e-mail; ✅
+* Deve conter link para página de recuperação de senha (esqueci minha senha). ✅
 
 #### **Página de recuperação de senha**
 
@@ -52,3 +52,18 @@ Algumas páginas serão criadas também para simular algumas funções, elas nã
 * O framework CSS Bootstrap deve ser utilizado na elaboração do projeto (versão 4 ou superior); ✅
 * A API ViaCEP deve ser utilizada para obter dados referentes aos CEPs utilizados no cadastro; ✅
 * Utilizar repositório público no github, com todos os integrantes do grupo como colaboradores e disponibilização de uma GithubPage com o projeto; ✅
+
+#### Layout Desktop
+
+![image](https://github.com/cclsenna/projeto-final-2/blob/minha-nova-branch/img/desktop_home.png?raw=true)
+
+![image](https://github.com/cclsenna/projeto-final-2/blob/minha-nova-branch/img/desktop_servicos.png?raw=true)
+
+#### Layout Mobile
+
+<div align="center">
+
+![image](https://github.com/cclsenna/projeto-final-2/blob/minha-nova-branch/img/mobile_home.png?raw=true)
+![image](https://github.com/cclsenna/projeto-final-2/blob/minha-nova-branch/img/mobile_servicos.png?raw=true)
+
+</div>
