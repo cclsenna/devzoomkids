@@ -133,3 +133,14 @@ body {
 
 
 
+#redef-senha{
+    position:relative;
+    bottom:52%;
+    left: 40%;    
+    cursor:pointer;
+    font-size: 20px;
+}
+
+
+
+
