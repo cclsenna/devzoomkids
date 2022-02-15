@@ -78,6 +78,34 @@
     height: auto;
 }
 
+@media screen and (max-width:991px){
+    #duvida-senha{
+        position:relative;
+        bottom: 56%;
+        left:95%;
+        cursor:pointer;
+        font-size: 20px;
+    }
+
+
+}
+
+@media screen and (max-width:750px){
+    #duvida-senha{
+        left:92%;
+    }
+
+
+}
+
+
+@media screen and (max-width:500px){
+    #duvida-senha{
+        left:88%;
+    }
+
+
+}
 
 
 

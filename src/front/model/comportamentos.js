@@ -1,20 +1,20 @@
 
 //altera a exiibção das divs na tela de recuperação de senha
 export function alternaTela(){
-    //declarando variaveis que serão utilizadas
     let contEmail=document.getElementById('cont');
     let contCode=document.getElementById('cont2');
     let emailCLiente=document.getElementById('inputEmail4').value;
     let textCode=document.getElementById('text-code').innerText;
     let newText=criptoEmail(emailCLiente);
 
+    //insere na tela o valor o email do  cliente "escondido"
     document.getElementById('text-code').innerText=textCode+''+ newText;
-    contEmail.classList.remove('d-flex');
 
+    //faz a alternancia entre as divs
+    contEmail.classList.remove('d-flex');
     contEmail.classList.add('d-none');
     contCode.classList.remove('d-none');
-    contCode.classList.add('d-flex');  
-
+    contCode.classList.add('d-flex');
     document.getElementById('inputEmail4').value='';    
     return;
 

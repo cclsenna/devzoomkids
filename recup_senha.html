@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./src/front/view/css/styles.css"> 
     <link rel="icon" type="image/svg" href="./src/front/view/img/favicon.svg">  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="./src/front/controller/jquery-3.6.0.js" defer></script>
+    <script src="./src/front/model/jquery-3.6.0.js" defer></script>
     <script src="./src/front/controller/app_comportamento.js" type="module" defer></script>
     <script src="./src/front/controller/app_validacao.js" type="module" defer></script>
 
@@ -65,7 +65,7 @@
           <p id="text-code">Insira o código de verificação de 4 dígitos enviado para o email </p>                
           <div class=" w-75 mb-4 mt-4">
             <input type="password" class="form-control input-limit" id="inputPassword4" placeholder="Código de 4 digitos" data-tipo="senha" required autocomplete="off" minlength="4" maxlength="4">
-            <div id="emailHelp" class="form-text">Caso não tenha recebido, clique para <a href="#">reenviar</a></div>
+            <div id="emailHelp" class="form-text">Caso não tenha recebido, clique para <a href="./recup_senha.html">reenviar</a></div>
 
           </div>                
           <button type="submit" class="btn btn-primary botao" id="botao-codigo">Alterar Senha</button>
