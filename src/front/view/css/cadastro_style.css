@@ -62,12 +62,12 @@
 
 
 
-.duvida-senha{
-    position:sticky;
-    bottom: 60%;
-    left:61%;
+#duvida-senha{
+    position:relative;
+    bottom: 56%;
+    left:85%;
     cursor:pointer;
-    font-size: 12px;
+    font-size: 20px;
 }
 
 
