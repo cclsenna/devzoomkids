@@ -46,7 +46,7 @@ document.addEventListener('click',(e)=>{
 
 //verifica se o botão pressionado foi o do modal do cadastro
     else if(e.target.id==='botao-modal-cadastro'){
-        window.location.href='https://cclsenna.github.io/projeto-final-2/servicos.html/servicos.html';
+        window.location.href='https://cclsenna.github.io/projeto-final-2/servicos.html';
         return;
 
     }
