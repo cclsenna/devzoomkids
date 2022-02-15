@@ -38,7 +38,7 @@ document.addEventListener('click',(e)=>{
 
 //verifica se o botõa pressionado foi o do modal de alteração de senha
     else if(e.target.id==='botao-modal-redefinir'){
-        window.location.href='/src/front/view/html/login.html';
+        window.location.href='https://cclsenna.github.io/projeto-final-2/login.html';
     }
 
 
@@ -46,7 +46,7 @@ document.addEventListener('click',(e)=>{
 
 //verifica se o botão pressionado foi o do modal do cadastro
     else if(e.target.id==='botao-modal-cadastro'){
-        window.location.href='/src/front/view/html/servicos.html';
+        window.location.href='https://cclsenna.github.io/projeto-final-2/servicos.html/servicos.html';
         return;
 
     }
