@@ -55,15 +55,15 @@ Algumas páginas serão criadas também para simular algumas funções, elas nã
 
 #### Layout Desktop
 
-![image](https://github.com/cclsenna/projeto-final-2/blob/minha-nova-branch/img/desktop_home.png?raw=true)
+![image](./src/front/view/img/desktop_home.PNG)
 
-![image](https://github.com/cclsenna/projeto-final-2/blob/minha-nova-branch/img/desktop_servicos.png?raw=true)
+![image](./src/front/view/img/desktop_servicos.PNG)
 
 #### Layout Mobile
 
 <div align="center">
 
-![image](https://github.com/cclsenna/projeto-final-2/blob/minha-nova-branch/img/mobile_home.png?raw=true)
-![image](https://github.com/cclsenna/projeto-final-2/blob/minha-nova-branch/img/mobile_servicos.png?raw=true)
+![image](./src/front/view/img/mobile_home.PNG)
+![image](./src/front/view/img/mobile_servicos.PNG)
 
 </div>
